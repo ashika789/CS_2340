@@ -1,21 +1,11 @@
 sdfghjklavydsMb .vkls,F;/flkutjfgb,.
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
 
 Heyyyyyyyyy -yamini
-=======
+
 sup guys, i am writing something down. dis is cool.
->>>>>>> refs/remotes/origin/master
-<<<<<<< HEAD
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+
 
 hello i am bob
