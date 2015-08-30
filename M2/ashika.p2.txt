@@ -1,5 +1,0 @@
-Hello!
-
-My name is Ashika Ganesh, and my GTiD number 903052276
-
-Extra Credit: Spring Backlog, Gradle
