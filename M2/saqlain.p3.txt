@@ -1,5 +1,5 @@
 Wassup Bob,
 
-My name is Saqlain Golandaz and my GTID number is 903051372.
+My name is Saqlain Golandaz and my GTID number is 903051372 and my GTID is sgolandaz3.
 
 Extra Credit: Sprint Backlog, Gradle
