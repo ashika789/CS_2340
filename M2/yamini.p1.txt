@@ -1,5 +1,4 @@
-Hello party people! I'm Yamini Nambiar. My gtid number is 903044238.
-
+Hello party people! I'm Yamini Nambiar. My gtid number is 903044238. My gtid is ynambiar3.
 The extra credit we'll do:
 
 Gradle
