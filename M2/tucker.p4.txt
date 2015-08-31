@@ -1,0 +1,5 @@
+Yo Bob,
+
+My name is Tucker LoCicero and my GTID number is 902986401 and my GTID is tlocicero3.
+
+Extra Credit: Sprint Backlog, Gradle
