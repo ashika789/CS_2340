@@ -1,7 +1,6 @@
-Hello party people! I'm Yamini Nambiar. My gtid number is 903044238. My gtid is ynambiar3.
-The extra credit we'll do:
+Hello party people!
 
-Gradle
-Sprint Backlog
+My name is Yamini Nambiar. My GTID number is 903044238 and my GTID is ynambiar3.
 
+Extra Credit: Sprint Backlog, Gradle
 
