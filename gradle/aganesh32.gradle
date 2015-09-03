@@ -1,0 +1,40 @@
+apply plugin: 'java'
+dependencies {
+    compile files('lib/resources.jar')
+}
+
+
+task hello << {
+      println 'This is the intro message'
+}
+
+task intro(dependsOn: hello) << {
+    println 'Hello, I am gradle.'
+}
+
+//Define a simple task
+task task1(dependsOn: intro) << {
+    println 'I have used a dependsOn command to the previous line to print this message'
+}
+
+
+//Define a simple task
+task task2(dependsOn: task1) << {
+    println 'Moving on to task 2'
+}
+
+//Set up some variables (properties)
+sourceCompatibility = 1.7
+version = '1.0'
+
+//Define the contents of the jar file
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version , 'Main-Class' : 'Foo'
+    }
+}
+
+//Set up a location of repositories so that any needed library dependencies can be downloaded
+repositories {
+    mavenCentral()
+}
