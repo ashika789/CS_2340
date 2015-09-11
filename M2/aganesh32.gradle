@@ -13,7 +13,7 @@ javadoc {
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Siddarth Senthilkumar - ssenthilkumar3',
+        attributes 'Implementation-Title': 'Ashika Ganesh - aganesh32',
                    'Implementation-Version': version,
                    'Main-Class': 'edu/gatech/oad/antlab/pkg1/AntLabMain',
                    'Class-Path': '../../lib/resources.jar'
