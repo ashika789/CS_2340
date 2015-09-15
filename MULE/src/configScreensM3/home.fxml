@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="120.0" layoutY="27.0" text="M.U.L.E" textFill="#19a69b">
+         <font>
+            <Font name="Georgia" size="96.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="97.0" fitWidth="100.0" layoutX="250.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/donkey-cartoon-clip-art-51491.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="120.0" layoutY="272.0" mnemonicParsing="false" text="Play" />
+      <Button layoutX="422.0" layoutY="272.0" mnemonicParsing="false" text="Rules" />
+   </children>
+</AnchorPane>

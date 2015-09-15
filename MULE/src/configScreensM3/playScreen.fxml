@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="242.0" layoutY="32.0" text="Difficulty" textFill="#19a69b">
+         <font>
+            <Font name="Georgia" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="168.0" text="Choose Your Map" textFill="#19a69b">
+         <font>
+            <Font name="Georgia" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="114.0" fitWidth="116.0" layoutX="381.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/dice_green_and_purple_b-1969px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="116.0" layoutX="137.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/map-clipart-travel-map2.png" />
+         </image>
+      </ImageView>
+      <Button layoutY="374.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="551.0" layoutY="374.0" mnemonicParsing="false" text="Next" />
+      <CheckBox layoutX="176.0" layoutY="87.0" mnemonicParsing="false" text="Easy" />
+      <CheckBox layoutX="273.0" layoutY="87.0" mnemonicParsing="false" text="Medium" />
+      <CheckBox layoutX="381.0" layoutY="87.0" mnemonicParsing="false" text="Hard" />
+      <CheckBox layoutX="147.0" layoutY="330.0" mnemonicParsing="false" text="Standard" />
+      <CheckBox layoutX="395.0" layoutY="330.0" mnemonicParsing="false" text="Randomized" />
+   </children>
+</AnchorPane>
