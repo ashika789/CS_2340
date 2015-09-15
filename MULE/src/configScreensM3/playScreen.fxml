@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="242.0" layoutY="32.0" text="Difficulty" textFill="#19a69b">
@@ -29,12 +28,12 @@
             <Image url="@../../../../../Downloads/map-clipart-travel-map2.png" />
          </image>
       </ImageView>
-      <Button layoutY="374.0" mnemonicParsing="false" text="Back" />
-      <Button layoutX="551.0" layoutY="374.0" mnemonicParsing="false" text="Next" />
-      <CheckBox layoutX="176.0" layoutY="87.0" mnemonicParsing="false" text="Easy" />
-      <CheckBox layoutX="273.0" layoutY="87.0" mnemonicParsing="false" text="Medium" />
-      <CheckBox layoutX="381.0" layoutY="87.0" mnemonicParsing="false" text="Hard" />
-      <CheckBox layoutX="147.0" layoutY="330.0" mnemonicParsing="false" text="Standard" />
-      <CheckBox layoutX="395.0" layoutY="330.0" mnemonicParsing="false" text="Randomized" />
+      <Button fx:id="backToHome" layoutY="374.0" mnemonicParsing="false" text="Back" />
+      <Button fx:id="nextToPlayerConfig" layoutX="554.0" layoutY="374.0" mnemonicParsing="false" text="Next" />
+      <CheckBox fx:id="chooseEasyDifficulty" layoutX="176.0" layoutY="87.0" mnemonicParsing="false" text="Easy" />
+      <CheckBox fx:id="chooseMediumDifficulty" layoutX="273.0" layoutY="87.0" mnemonicParsing="false" text="Medium" />
+      <CheckBox fx:id="chooseHardDifficulty" layoutX="381.0" layoutY="87.0" mnemonicParsing="false" text="Hard" />
+      <CheckBox fx:id="chooseStandardMap" layoutX="147.0" layoutY="330.0" mnemonicParsing="false" text="Standard" />
+      <CheckBox fx:id="chooseRandomizedMap" layoutX="395.0" layoutY="330.0" mnemonicParsing="false" text="Randomized" />
    </children>
 </AnchorPane>

@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="120.0" layoutY="27.0" text="M.U.L.E" textFill="#19a69b">
@@ -19,7 +18,7 @@
             <Image url="@../../../../../Downloads/donkey-cartoon-clip-art-51491.png" />
          </image>
       </ImageView>
-      <Button layoutX="120.0" layoutY="272.0" mnemonicParsing="false" text="Play" />
-      <Button layoutX="422.0" layoutY="272.0" mnemonicParsing="false" text="Rules" />
+      <Button fx:id="playButton" layoutX="120.0" layoutY="272.0" mnemonicParsing="false" text="Play" />
+      <Button fx:id="rulesButton" layoutX="422.0" layoutY="272.0" mnemonicParsing="false" text="Rules" />
    </children>
 </AnchorPane>
