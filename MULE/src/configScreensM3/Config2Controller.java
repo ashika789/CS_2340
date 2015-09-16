@@ -14,25 +14,11 @@ import java.io.IOException;
 public class Config2Controller {
 
     @FXML
-    private Button config2StartBtn;
+    private Button config2StartBtn, config2BackBtn;
     @FXML
-    private Button config2BackBtn;
+    private ComboBox<String> combo1human, combo2human, combo3human, combo4human;
     @FXML
-    private ComboBox<String> combo1human;
-    @FXML
-    private ComboBox<String> combo1race;
-    @FXML
-    private ComboBox<String> combo2human;
-    @FXML
-    private ComboBox<String> combo2race;
-    @FXML
-    private ComboBox<String> combo3human;
-    @FXML
-    private ComboBox<String> combo3race;
-    @FXML
-    private ComboBox<String> combo4human;
-    @FXML
-    private ComboBox<String> combo4race;
+    private ComboBox<String> combo1race, combo2race, combo3race, combo4race;
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
     ObservableList<String> raceBox = FXCollections.observableArrayList("Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite");
