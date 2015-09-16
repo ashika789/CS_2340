@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="configScreensM3.Config1Controller">
+   <children>
+      <Label layoutX="242.0" layoutY="32.0" text="Difficulty" textFill="#19a69b">
+         <font>
+            <Font name="Georgia" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="168.0" text="Choose Your Map" textFill="#19a69b">
+         <font>
+            <Font name="Georgia" size="28.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="114.0" fitWidth="116.0" layoutX="381.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@dice_green_and_purple_b-1969px.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="128.0" fitWidth="116.0" layoutX="137.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@map-clipart-travel-map2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="config1BackBtn" layoutY="374.0" mnemonicParsing="false" onAction="#config1ButtonAction" text="Back" />
+      <Button fx:id="config1NextBtn" layoutX="554.0" layoutY="374.0" mnemonicParsing="false" onAction="#config1ButtonAction" text="Next" />
+      <RadioButton fx:id="easyRadio" layoutX="182.0" layoutY="87.0" mnemonicParsing="false" text="Easy" />
+      <RadioButton fx:id="mediumRadio" layoutX="267.0" layoutY="87.0" mnemonicParsing="false" text="Medium" />
+      <RadioButton fx:id="hardRadio" layoutX="373.0" layoutY="87.0" mnemonicParsing="false" text="Hard" />
+      <RadioButton fx:id="standardMapRadio" layoutX="156.0" layoutY="330.0" mnemonicParsing="false" text="Standard" />
+      <RadioButton fx:id="randomMapRadio" layoutX="388.0" layoutY="330.0" mnemonicParsing="false" text="Randomized" />
+   </children>
+</AnchorPane>

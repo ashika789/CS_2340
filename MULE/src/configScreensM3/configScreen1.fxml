@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="configScreensM3.ConfigController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="configScreensM3.Config1Controller">
    <children>
       <Label layoutX="242.0" layoutY="32.0" text="Difficulty" textFill="#19a69b">
          <font>
@@ -28,8 +28,8 @@
             <Image url="@map-clipart-travel-map2.png" />
          </image>
       </ImageView>
-      <Button fx:id="playScrnBack" layoutY="374.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Back" />
-      <Button fx:id="playScrnNext" layoutX="554.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Next" />
+      <Button fx:id="config1BackBtn" layoutY="374.0" mnemonicParsing="false" onAction="#config1ButtonAction" text="Back" />
+      <Button fx:id="config1NextBtn" layoutX="554.0" layoutY="374.0" mnemonicParsing="false" onAction="#config1ButtonAction" text="Next" />
       <RadioButton fx:id="easyRadio" layoutX="182.0" layoutY="87.0" mnemonicParsing="false" text="Easy" />
       <RadioButton fx:id="mediumRadio" layoutX="267.0" layoutY="87.0" mnemonicParsing="false" text="Medium" />
       <RadioButton fx:id="hardRadio" layoutX="373.0" layoutY="87.0" mnemonicParsing="false" text="Hard" />
