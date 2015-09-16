@@ -1,4 +1,4 @@
-package configScreensM3;
+package configScreens;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,10 +13,7 @@ public class Config1Controller {
 
     @FXML
     private Button config1NextBtn, config1BackBtn;
-    @FXML
-    private ToggleGroup difficultyToggle;
-    @FXML
-    private ToggleGroup mapToggle;
+    private ToggleGroup difficultyToggle, mapToggle;
     @FXML
     private RadioButton easyRadio, mediumRadio, hardRadio, standardMapRadio, randomMapRadio;
 

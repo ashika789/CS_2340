@@ -1,4 +1,4 @@
-package configScreensM3;
+package configScreens;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,7 +30,7 @@ public class Config2Controller {
         Button source = (Button) event.getSource();
         stage = (Stage) source.getScene().getWindow();
         if (source == config2StartBtn) {
-            root = FXMLLoader.load(getClass().getResource("gamePlaceHolderScreen.fxml"));
+            root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
         } else {
             root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
         }

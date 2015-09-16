@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="configScreensM3.Config1Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="configScreens.Config1Controller">
    <children>
       <Label layoutX="242.0" layoutY="32.0" text="Difficulty" textFill="#19a69b">
          <font>
@@ -20,12 +20,12 @@
       </Label>
       <ImageView fitHeight="114.0" fitWidth="116.0" layoutX="381.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@dice_green_and_purple_b-1969px.png" />
+            <Image url="@graphics/dice_green_and_purple_b-1969px.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="128.0" fitWidth="116.0" layoutX="137.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@map-clipart-travel-map2.png" />
+            <Image url="@graphics/map-clipart-travel-map2.png" />
          </image>
       </ImageView>
       <Button fx:id="config1BackBtn" layoutY="374.0" mnemonicParsing="false" onAction="#config1ButtonAction" text="Back" />

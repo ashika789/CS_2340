@@ -1,4 +1,4 @@
-package configScreensM3;
+package configScreens;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
