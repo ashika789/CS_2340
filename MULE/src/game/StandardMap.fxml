@@ -133,7 +133,7 @@
             </ImageView>
             <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <image>
-                  <Image url="@graphics/TileRiver.png" />
+                  <Image url="@graphics/TileTown.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
