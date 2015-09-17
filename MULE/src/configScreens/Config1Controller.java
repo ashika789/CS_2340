@@ -16,6 +16,8 @@ public class Config1Controller {
     private ToggleGroup difficultyToggle, mapToggle;
     @FXML
     private RadioButton easyRadio, mediumRadio, hardRadio, standardMapRadio, randomMapRadio;
+    @FXML
+    private Label errorLabel;
 
     @FXML
     private void config1ButtonAction(ActionEvent event) throws IOException {
@@ -24,13 +26,32 @@ public class Config1Controller {
         Button source = (Button) event.getSource();
         stage = (Stage) source.getScene().getWindow();
         if (source == config1NextBtn) {
-            root = FXMLLoader.load(getClass().getResource("configScreen2.fxml"));
+            boolean toggles[] = {false, false};
+            for (Toggle t : difficultyToggle.getToggles()) {
+                if (t.isSelected()) {
+                    toggles[0] = true;
+                }
+            }
+            for (Toggle t : mapToggle.getToggles()) {
+                if (t.isSelected()) {
+                    toggles[1] = true;
+                }
+            }
+            if (toggles[0] && toggles[1]) {
+                root = FXMLLoader.load(getClass().getResource("configScreen2.fxml"));
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
+            else {
+                errorLabel.setVisible(true);
+            }
         } else {
             root = FXMLLoader.load(getClass().getResource("home.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
     public void initialize() throws IOException {
