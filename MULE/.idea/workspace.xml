@@ -2,16 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a656c76-a796-458e-8e67-d8728c919d15" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/PurchasePropertyController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileMountain1.png" afterPath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileMountain1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/graphics/TileMountain1.png" afterPath="$PROJECT_DIR$/src/game/graphics/TileMountain1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileMountain2.png" afterPath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileMountain2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/graphics/TileMountain2.png" afterPath="$PROJECT_DIR$/src/game/graphics/TileMountain2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileMountain3.png" afterPath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileMountain3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/graphics/TileMountain3.png" afterPath="$PROJECT_DIR$/src/game/graphics/TileMountain3.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MULE/game/graphics/TilePlain.png" afterPath="$PROJECT_DIR$/out/production/MULE/game/graphics/TilePlain.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/graphics/TilePlain.png" afterPath="$PROJECT_DIR$/src/game/graphics/TilePlain.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileRiver.png" afterPath="$PROJECT_DIR$/out/production/MULE/game/graphics/TileRiver.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/graphics/TileRiver.png" afterPath="$PROJECT_DIR$/src/game/graphics/TileRiver.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MULE/game/StandardMap.fxml" afterPath="$PROJECT_DIR$/out/production/MULE/game/StandardMap.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/game/StandardMap.fxml" afterPath="$PROJECT_DIR$/src/game/StandardMap.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/MULE/configScreens/configScreen2.fxml" afterPath="$PROJECT_DIR$/out/production/MULE/configScreens/configScreen2.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/configScreens/configScreen2.fxml" afterPath="$PROJECT_DIR$/src/configScreens/configScreen2.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../gradle-2.6/bin/gradle" afterPath="$PROJECT_DIR$/../gradle-2.6/bin/gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MULE.iws" />
@@ -40,8 +45,8 @@
       <file leaf-file-name="home.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/configScreens/home.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="450">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -51,8 +56,10 @@
         <entry file="file://$PROJECT_DIR$/src/configScreens/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,10 +68,8 @@
         <entry file="file://$PROJECT_DIR$/src/configScreens/HomeController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,8 +77,8 @@
       <file leaf-file-name="Config1Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/configScreens/Config1Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-              <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+            <state vertical-scroll-proportion="-14.444445" vertical-offset="0" max-vertical-offset="1080">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,14 +86,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config2Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Config2Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/configScreens/Config2Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44554454" vertical-offset="255" max-vertical-offset="1470">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1470">
+              <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PurchasePropertyController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/PurchasePropertyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.0119047" vertical-offset="0" max-vertical-offset="780">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchasePropertyScreen.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/purchasePropertyScreen.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -96,8 +123,8 @@
       <file leaf-file-name="StandardMap.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/StandardMap.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4245">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="4260">
+              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -131,7 +158,9 @@
         <option value="$PROJECT_DIR$/src/configScreensM3/Config1Controller.java" />
         <option value="$PROJECT_DIR$/src/configScreens/home.fxml" />
         <option value="$PROJECT_DIR$/src/configScreens/Config1Controller.java" />
+        <option value="$PROJECT_DIR$/src/game/StandardMap.fxml" />
         <option value="$PROJECT_DIR$/src/configScreens/Config2Controller.java" />
+        <option value="$PROJECT_DIR$/src/game/PurchasePropertyController.java" />
       </list>
     </option>
   </component>
@@ -149,7 +178,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="698" />
+    <option name="height" value="697" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -238,7 +267,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/Applications/JavaFX Scene Builder 2.0.app" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -247,6 +276,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/game" />
+      <recent name="$PROJECT_DIR$/src/game/graphics" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -475,7 +506,7 @@
     <option name="totallyTimeSpent" value="58000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="698" extended-state="7" />
+    <frame x="0" y="23" width="1280" height="697" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -496,7 +527,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1526232" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15286624" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -542,7 +573,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="375">
           <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -550,9 +583,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="660">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -599,7 +630,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -607,9 +640,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -648,7 +679,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -667,7 +700,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -682,10 +717,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/configScreens/home.fxml">
+    <entry file="file://$PROJECT_DIR$/src/game/StandardMap.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="450">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="4260">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -693,49 +728,67 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/StandardMap.fxml">
+    <entry file="file://$PROJECT_DIR$/src/configScreens/Config1Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="4245">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="-14.444445" vertical-offset="0" max-vertical-offset="1080">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/configScreens/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/configScreens/home.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/configScreens/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/configScreens/Config1Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
-          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/configScreens/Config2Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44554454" vertical-offset="255" max-vertical-offset="1470">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1470">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/purchasePropertyScreen.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/PurchasePropertyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0119047" vertical-offset="0" max-vertical-offset="780">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
