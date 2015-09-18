@@ -41,6 +41,4 @@ public class PurchasePropertyController {
 
         public void initialize() throws IOException {
         }
-    }
-
 }
