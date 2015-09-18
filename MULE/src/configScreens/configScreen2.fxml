@@ -35,11 +35,11 @@
       </Label>
       <Button fx:id="config2BackBtn" layoutY="374.0" mnemonicParsing="false" onAction="#config2ButtonAction" text="Back" />
       <Button fx:id="config2StartBtn" layoutX="514.0" layoutY="374.0" mnemonicParsing="false" onAction="#config2ButtonAction" text="Start Game" />
-      <ComboBox fx:id="combo1human" layoutX="88.0" layoutY="127.0" prefWidth="150.0" promptText="Choose Player" />
+      <ComboBox fx:id="combo1human" layoutX="88.0" layoutY="137.0" prefWidth="150.0" promptText="Choose Player" />
       <ComboBox fx:id="combo1race" layoutX="88.0" layoutY="174.0" prefWidth="150.0" promptText="Choose Race" />
-      <ComboBox fx:id="combo2human" layoutX="374.0" layoutY="127.0" prefWidth="150.0" promptText="Choose Player" />
-      <ComboBox fx:id="combo4human" layoutX="374.0" layoutY="271.0" prefWidth="150.0" promptText="Choose Player" />
-      <ComboBox fx:id="combo3human" layoutX="88.0" layoutY="271.0" prefWidth="150.0" promptText="Choose Player" />
+      <ComboBox fx:id="combo2human" layoutX="374.0" layoutY="137.0" prefWidth="150.0" promptText="Choose Player" />
+      <ComboBox fx:id="combo4human" layoutX="374.0" layoutY="281.0" prefWidth="150.0" promptText="Choose Player" />
+      <ComboBox fx:id="combo3human" layoutX="88.0" layoutY="281.0" prefWidth="150.0" promptText="Choose Player" />
       <ComboBox fx:id="combo4race" layoutX="374.0" layoutY="318.0" prefWidth="150.0" promptText="Choose Race" />
       <ComboBox fx:id="combo2race" layoutX="374.0" layoutY="174.0" prefWidth="150.0" promptText="Choose Race" />
       <ComboBox fx:id="combo3race" layoutX="88.0" layoutY="318.0" prefWidth="150.0" promptText="Choose Race" />
@@ -48,5 +48,9 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Circle fill="DODGERBLUE" layoutX="105.0" layoutY="103.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ff321f" layoutX="391.0" layoutY="103.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#fff822" layoutX="105.0" layoutY="251.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ffa639" layoutX="391.0" layoutY="250.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>
