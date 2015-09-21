@@ -24,6 +24,8 @@ public class HomeController {
         stage = (Stage) source.getScene().getWindow();
         if (source == playBtn) {
             root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
+        } else if (source == ruleBtn){
+            root = FXMLLoader.load(getClass().getResource("rulesScreen.fxml"));
         } else {
             root = null;
         }

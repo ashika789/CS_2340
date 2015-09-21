@@ -19,6 +19,6 @@
          </image>
       </ImageView>
       <Button fx:id="playBtn" layoutX="120.0" layoutY="272.0" mnemonicParsing="false" onAction="#homeButtonAction" text="Play" />
-      <Button fx:id="ruleBtn" layoutX="428.0" layoutY="272.0" mnemonicParsing="false" text="Rules" />
+      <Button fx:id="ruleBtn" layoutX="428.0" layoutY="272.0" mnemonicParsing="false" onAction="#homeButtonAction" text="Rules" />
    </children>
 </AnchorPane>
