@@ -14,11 +14,11 @@ import java.io.IOException;
 public class Config2Controller {
 
     @FXML
+    private ComboBox<String> combo1race, combo2race, combo3race, combo4race;
+    @FXML
     private Button config2StartBtn, config2BackBtn;
     @FXML
     private ComboBox<String> combo1human, combo2human, combo3human, combo4human;
-    @FXML
-    private ComboBox<String> combo1race, combo2race, combo3race, combo4race;
     @FXML
     private Label errorLabel;
 
