@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,29 +18,27 @@ import java.io.IOException;
 public class playerTurnFinishedController {
 
         @FXML
-        private Button close;
+        private Button popUp1;
 
         @FXML
         private Label errorLabel;
 
         @FXML
-        private void okayButtonAction(ActionEvent event) throws IOException {
+        private void handleButtonAction(ActionEvent event)
+                throws IOException {
+
             Stage stage;
             Parent root;
-            Button source = (Button) event.getSource();
-            stage = (Stage) source.getScene().getWindow();
-            if (source == close) {
-                root = FXMLLoader.load(getClass().getResource("StandardMap.fxml"));
-            } else {
-                root = null;
+
+            if(event.getSource()==popUp1) {
+                stage = new Stage();
+                root = FXMLLoader.load(getClass().getResource("FXML2.fxml"));
+                stage.setScene(new Scene(root));
+                stage.setTitle("My modal window");
+                stage.initOwner(popUp1.getScene().getWindow());
+                stage.showAndWait();
             }
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
 
         }
 
-
-        public void initialize() throws IOException {
-        }
 }
