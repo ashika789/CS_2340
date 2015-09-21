@@ -24,21 +24,19 @@ public class playerTurnFinishedController {
         private Label errorLabel;
 
         @FXML
-        private void handleButtonAction(ActionEvent event)
-                throws IOException {
-
+        private void handleButtonAction(ActionEvent event) throws IOException {
             Stage stage;
             Parent root;
-
-            if(event.getSource()==popUp1) {
-                stage = new Stage();
-                root = FXMLLoader.load(getClass().getResource("FXML2.fxml"));
-                stage.setScene(new Scene(root));
-                stage.setTitle("My modal window");
-                stage.initOwner(popUp1.getScene().getWindow());
-                stage.showAndWait();
+            Button source = (Button) event.getSource();
+            stage = (Stage) source.getScene().getWindow();
+            if (source == popUp1) {
+                root = FXMLLoader.load(getClass().getResource("StandardMap.fxml"));
+            } else {
+                root = null;
             }
-
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
 
 }
