@@ -73,12 +73,14 @@ public class Config2Controller {
     }
 
     private boolean verifyComboBoxes() {
+        //need to add names,
         boolean[] players = {false, false, false, false};
         if (combo1human.getValue() == "Not playing") {
             players[0] = true;
         } else if (combo1human.getValue() != null && combo1race.getValue() != null) {
                 players[0] = true;
                 this.players.add(new Player(combo1human.getValue(), combo1race.getValue()));
+            //after names are added, add name parameter to Player ctor
         }
         if (combo2human.getValue() == "Not playing") {
             players[1] = true;
