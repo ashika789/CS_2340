@@ -15,32 +15,32 @@ import java.io.IOException;
  */
 public class PurchasePropertyController {
 
-        @FXML
-        private Button okayButton;
+    @FXML
+    private Button okayButton;
 
-        @FXML
-        private Label errorLabel;
+    @FXML
+    private Label errorLabel;
 
-        @FXML
-        private void okayButtonAction(ActionEvent event) throws IOException {
-            
+    @FXML
+    private void okayButtonAction(ActionEvent event) throws IOException {
 
-            Stage stage;
-            Parent root;
-            Button source = (Button) event.getSource();
-            stage = (Stage) source.getScene().getWindow();
-            if (source == okayButton) {
-                root = FXMLLoader.load(getClass().getResource("StandardMap.fxml"));
-            } else {
-                root = null;
-            }
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
 
+        Stage stage;
+        Parent root;
+        Button source = (Button) event.getSource();
+        stage = (Stage) source.getScene().getWindow();
+        if (source == okayButton) {
+            root = FXMLLoader.load(getClass().getResource("StandardMap.fxml"));
+        } else {
+            root = null;
         }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
 
     public void initialize() throws IOException {
-        }
+    }
 }

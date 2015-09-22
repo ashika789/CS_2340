@@ -12,9 +12,9 @@ import java.io.IOException;
 public class HomeController {
 
     @FXML
-    private Button playBtn;
-    @FXML
     private Button ruleBtn;
+    @FXML
+    private Button playBtn;
 
     @FXML
     private void homeButtonAction(ActionEvent event) throws IOException {

@@ -1,5 +1,6 @@
 package configScreens;
 
+import MULEgame.Player;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,8 +9,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Config2Controller {
 
@@ -21,6 +24,13 @@ public class Config2Controller {
     private ComboBox<String> combo1human, combo2human, combo3human, combo4human;
     @FXML
     private Label errorLabel;
+
+
+
+
+
+    ArrayList<Player> players = new ArrayList<Player>();
+
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
     ObservableList<String> raceBox = FXCollections.observableArrayList("Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite");
@@ -37,10 +47,22 @@ public class Config2Controller {
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
+
+                //popup window asking player
+                System.out.println(players);
+                for (int i = 0; i < players.size(); i++) {
+                    stage = new Stage();
+                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                    stage.setScene(new Scene(root));
+                    stage.setTitle("Purchase Property for Player " + (i + 1));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.initOwner(source.getScene().getWindow());
+                    stage.showAndWait();
+                }
+
             } else {
                 errorLabel.setVisible(true);
             }
-
         } else {
             root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
             Scene scene = new Scene(root);
@@ -56,21 +78,25 @@ public class Config2Controller {
             players[0] = true;
         } else if (combo1human.getValue() != null && combo1race.getValue() != null) {
                 players[0] = true;
+                this.players.add(new Player(combo1human.getValue(), combo1race.getValue()));
         }
         if (combo2human.getValue() == "Not playing") {
             players[1] = true;
         } else if (combo2human.getValue() != null && combo2race.getValue() != null) {
             players[1] = true;
+            this.players.add(new Player(combo1human.getValue(), combo1race.getValue()));
         }
         if (combo3human.getValue() == "Not playing") {
             players[2] = true;
         } else if (combo3human.getValue() != null && combo3race.getValue() != null) {
             players[2] = true;
+            this.players.add(new Player(combo1human.getValue(), combo1race.getValue()));
         }
         if (combo4human.getValue() == "Not playing") {
             players[3] = true;
         } else if (combo4human.getValue() != null && combo4race.getValue() != null) {
             players[3] = true;
+            this.players.add(new Player(combo1human.getValue(), combo1race.getValue()));
         }
         if (players[0] && players[1] && players[0] && players[0] ) {
             return true;
@@ -88,5 +114,6 @@ public class Config2Controller {
         combo2race.setItems(raceBox);
         combo3race.setItems(raceBox);
         combo4race.setItems(raceBox);
+
     }
 }
