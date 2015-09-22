@@ -55,5 +55,44 @@ public class Player {
     }
 
 
+    public void addFood(double x) {
+        food += x;
+    }
+
+    public double getFood() {
+        return food;
+    }
+
+    public void addEnergy(double x) {
+        energy += x;
+    }
+
+    public double getEnergy() {
+        return energy;
+    }
+
+    public void addCrystite(double x) {
+        crystite += x;
+    }
+
+    public double getCrystite() {
+        return crystite;
+    }
+
+    public void addMule(int x) {
+        mule += x;
+    }
+
+    public double getMule() {
+        return mule;
+    }
+
+    public void addSmithore(double x) {
+        smithore += x;
+    }
+
+    public double getSmithore() {
+        return smithore;
+    }
 
 }
