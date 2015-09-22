@@ -50,7 +50,7 @@
       </Label>
       <Circle fill="DODGERBLUE" layoutX="105.0" layoutY="103.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#ff321f" layoutX="391.0" layoutY="103.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#fff822" layoutX="105.0" layoutY="251.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#dd02cf" layoutX="105.0" layoutY="251.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#ffa639" layoutX="391.0" layoutY="250.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
    </children>
 </AnchorPane>
