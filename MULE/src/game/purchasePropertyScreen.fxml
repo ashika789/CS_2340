@@ -20,7 +20,7 @@
             <Font name="Georgia" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="okayButton" layoutX="163.0" layoutY="124.0" mnemonicParsing="false" text="OK" />
+      <Button fx:id="okayButton" layoutX="163.0" layoutY="124.0" mnemonicParsing="false" onAction="#okayButtonAction" text="OK" />
    </children>
    <opaqueInsets>
       <Insets />
