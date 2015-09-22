@@ -23,6 +23,8 @@ public class PurchasePropertyController {
 
         @FXML
         private void okayButtonAction(ActionEvent event) throws IOException {
+            
+
             Stage stage;
             Parent root;
             Button source = (Button) event.getSource();
@@ -39,6 +41,6 @@ public class PurchasePropertyController {
         }
 
 
-        public void initialize() throws IOException {
+    public void initialize() throws IOException {
         }
 }
