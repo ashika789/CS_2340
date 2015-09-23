@@ -15,10 +15,5 @@ import configScreens.Config2Controller;
  * Created by tuckerlocicero on 9/23/15.
  */
 public class StandardMapController {
-//
-//    Map map = new Map(new Location[5][9], configScreens.Config2Controller.players);
-//
-//    private void changeTileColor() {
 
-//    }
 }
