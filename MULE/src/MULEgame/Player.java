@@ -12,7 +12,7 @@ public class Player {
 
     /* methods */
 
-    public Player(String type, String race ) {
+    public Player(String s, String type, String race, int i) {
 
 
     }

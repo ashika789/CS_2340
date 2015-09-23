@@ -98,4 +98,6 @@ public class Player {
         return smithore;
     }
 
+    public int getPlayerNumber() {return playerNumber;}
+
 }
