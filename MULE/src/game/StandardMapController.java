@@ -14,7 +14,8 @@ import javafx.stage.Stage;
  */
 public class StandardMapController {
 
-    private void changeTileColor() {
-
+    private void changeTileColor(MULEgame.Player player) {
+        //player.setProperties(player.getProperties.add(location of mouse click))
+        //change color of that tile to whatever color that player is
     }
 }
