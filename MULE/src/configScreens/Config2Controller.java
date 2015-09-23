@@ -79,7 +79,7 @@ public class Config2Controller {
             players[0] = true;
         } else if (combo1human.getValue() != null && combo1race.getValue() != null) {
                 players[0] = true;
-                this.players.add(new Player(combo1human.getValue(), combo1race.getValue()));
+                this.players.add(new Player("PLAYER 1", combo1human.getValue(), combo1race.getValue(), 1));
             //after names are added, add name parameter to Player ctor
         }
         if (combo2human.getValue() == "Not playing") {

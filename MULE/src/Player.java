@@ -16,14 +16,16 @@ public class Player {
     double crystite;
     double smithore;
     int mule;
+    int playerNumber;
 
     //default ctor
+    //default ctor's playerNumber is 0. Not sure why we even need a default character
     public Player() {
-        new Player(new Location(), new ArrayList<>(),"Colonel Robert Waters", "Human", "Human");
+        new Player(new Location(), new ArrayList<>(),"Colonel Robert Waters", "Human", "Human", 0);
     }
 
     //all variables assigned ctor
-    public Player(Location loc, ArrayList<Location> properties, String name, String type, String race) {
+    public Player(Location loc, ArrayList<Location> properties, String name, String type, String race, int playerNumber) {
         if (type == "Not playing") {
             return;
         }
@@ -32,19 +34,20 @@ public class Player {
         this.name = name;
         this.type = type;
         this.race = race;
+        this.playerNumber = playerNumber;
         food = 0;
         energy = 0;
         crystite = 0;
         smithore = 0;
         mule = 0;
-
     }
 
     //this should be the only the ctor we really need
-    public Player(String name, String type, String race) {
+    public Player(String name, String type, String race, int playerNumber) {
         this.name = name;
         this.type = type;
         this.race = race;
+        this.playerNumber = playerNumber;
         properties = new ArrayList<>();
         loc = new Location();
         food = 0;
