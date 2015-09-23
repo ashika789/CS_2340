@@ -29,7 +29,7 @@ public class Config2Controller {
 
 
 
-    ArrayList<Player> players = new ArrayList<Player>();
+    public ArrayList<Player> players = new ArrayList<Player>();
 
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
@@ -79,26 +79,26 @@ public class Config2Controller {
             players[0] = true;
         } else if (combo1human.getValue() != null && combo1race.getValue() != null) {
                 players[0] = true;
-                this.players.add(new Player("game.Player 1", combo1human.getValue(), combo1race.getValue(), 1));
+                this.players.add(new Player("Player 1", combo1human.getValue(), combo1race.getValue(), 1));
             //after names are added, add name parameter to game.Player ctor
         }
         if (combo2human.getValue() == "Not playing") {
             players[1] = true;
         } else if (combo2human.getValue() != null && combo2race.getValue() != null) {
             players[1] = true;
-            this.players.add(new Player("game.Player 2", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player("Player 2", combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (combo3human.getValue() == "Not playing") {
             players[2] = true;
         } else if (combo3human.getValue() != null && combo3race.getValue() != null) {
             players[2] = true;
-            this.players.add(new Player("game.Player 3", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player("Player 3", combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (combo4human.getValue() == "Not playing") {
             players[3] = true;
         } else if (combo4human.getValue() != null && combo4race.getValue() != null) {
             players[3] = true;
-            this.players.add(new Player("game.Player 4", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player("Player 4", combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (players[0] && players[1] && players[0] && players[0] ) {
             return true;
