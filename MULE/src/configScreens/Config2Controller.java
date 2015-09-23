@@ -1,5 +1,6 @@
 package configScreens;
 
+import MULEgame.Player;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -53,7 +54,7 @@ public class Config2Controller {
                     stage = new Stage();
                     root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
                     stage.setScene(new Scene(root));
-                    stage.setTitle("Purchase Property for MULEgame.Player " + (i + 1));
+                    stage.setTitle("Purchase Property for Player " + (i + 1));
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.initOwner(source.getScene().getWindow());
                     stage.showAndWait();
@@ -78,26 +79,26 @@ public class Config2Controller {
             players[0] = true;
         } else if (combo1human.getValue() != null && combo1race.getValue() != null) {
                 players[0] = true;
-                this.players.add(new Player("MULEgame.Player 1", combo1human.getValue(), combo1race.getValue(), 1));
-            //after names are added, add name parameter to MULEgame.Player ctor
+                this.players.add(new Player("Player 1", combo1human.getValue(), combo1race.getValue(), 1));
+            //after names are added, add name parameter to Player ctor
         }
         if (combo2human.getValue() == "Not playing") {
             players[1] = true;
         } else if (combo2human.getValue() != null && combo2race.getValue() != null) {
             players[1] = true;
-            this.players.add(new Player("MULEgame.Player 2", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player("Player 2", combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (combo3human.getValue() == "Not playing") {
             players[2] = true;
         } else if (combo3human.getValue() != null && combo3race.getValue() != null) {
             players[2] = true;
-            this.players.add(new Player("MULEgame.Player 3", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player("Player 3", combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (combo4human.getValue() == "Not playing") {
             players[3] = true;
         } else if (combo4human.getValue() != null && combo4race.getValue() != null) {
             players[3] = true;
-            this.players.add(new Player("MULEgame.Player 4", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player("Player 4", combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (players[0] && players[1] && players[0] && players[0] ) {
             return true;

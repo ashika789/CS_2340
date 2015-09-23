@@ -13,7 +13,7 @@
             <Font name="Georgia" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="191.0" layoutY="167.0" text="Choose Your MULEgame.Map" textFill="#19a69b">
+      <Label layoutX="191.0" layoutY="167.0" text="Choose Your Map" textFill="#19a69b">
          <font>
             <Font name="Georgia" size="28.0" />
          </font>

@@ -1,4 +1,4 @@
-package MULEgame; /**
+/**
  * Created by yamininambiar on 9/22/15.
  */
 
@@ -11,8 +11,8 @@ public class Map {
 
     public Map() {
         new Map(new Location[5][9],new ArrayList<Player>());
-//        this.grid = new MULEgame.Location[5][9];
-//        this.players = new ArrayList<MULEgame.Player>();
+//        this.grid = new Location[5][9];
+//        this.players = new ArrayList<Player>();
     }
 
     public Map(Location[][] grid, ArrayList<Player> players ) {

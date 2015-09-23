@@ -15,7 +15,7 @@
             <Font name="Georgia" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="107.0" layoutY="81.0" text="Next MULEgame.Player - it's your turn!">
+      <Label layoutX="107.0" layoutY="81.0" text="Next Player - it's your turn!">
          <font>
             <Font name="Georgia" size="14.0" />
          </font>

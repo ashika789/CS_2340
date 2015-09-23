@@ -1,5 +1,3 @@
-package MULEgame;
-
 /**
  * Created by yamininambiar on 9/22/15.
  */
