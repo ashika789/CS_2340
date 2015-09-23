@@ -8,26 +8,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="configScreens.Config2Controller">
    <children>
-      <Label layoutX="131.0" layoutY="92.0" text="Player 1" textFill="#19a69b">
-         <font>
-            <Font name="Georgia" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="416.0" layoutY="92.0" text="Player 2" textFill="#19a69b">
-         <font>
-            <Font name="Georgia" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="131.0" layoutY="240.0" text="Player 3" textFill="#19a69b">
-         <font>
-            <Font name="Georgia" size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="416.0" layoutY="240.0" text="Player 4" textFill="#19a69b">
-         <font>
-            <Font name="Georgia" size="18.0" />
-         </font>
-      </Label>
       <Label layoutX="135.0" layoutY="14.0" text="Player Configuration" textFill="#19a69b">
          <font>
             <Font name="Georgia" size="36.0" />
@@ -52,5 +32,9 @@
       <Circle fill="#ff321f" layoutX="391.0" layoutY="103.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#dd02cf" layoutX="105.0" layoutY="251.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#ffa639" layoutX="391.0" layoutY="250.0" radius="17.0" stroke="BLACK" strokeType="INSIDE" />
+      <TextField fx:id="p1Name" layoutX="131.0" layoutY="91.0" prefHeight="25.0" prefWidth="129.0" promptText="P1 Name" />
+      <TextField fx:id="p2Name" layoutX="417.0" layoutY="91.0" prefHeight="25.0" prefWidth="129.0" promptText="P2 Name" />
+      <TextField fx:id="p3Name" layoutX="131.0" layoutY="239.0" prefHeight="25.0" prefWidth="129.0" promptText="P3 Name" />
+      <TextField fx:id="p4Name" layoutX="417.0" layoutY="238.0" prefHeight="25.0" prefWidth="129.0" promptText="P4 Name" />
    </children>
 </AnchorPane>

@@ -13,16 +13,11 @@
             <Font name="Georgia" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="191.0" layoutY="167.0" text="Choose Your Map" textFill="#19a69b">
+      <Label layoutX="191.0" layoutY="167.0" text="Choose Your game.Map" textFill="#19a69b">
          <font>
             <Font name="Georgia" size="28.0" />
          </font>
       </Label>
-      <ImageView fitHeight="114.0" fitWidth="116.0" layoutX="381.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@graphics/dice_green_and_purple_b-1969px.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="128.0" fitWidth="116.0" layoutX="137.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@graphics/map-clipart-travel-map2.png" />
@@ -40,5 +35,10 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <ImageView fitHeight="110.0" fitWidth="116.0" layoutX="400.0" layoutY="202.0">
+         <image>
+            <Image url="@graphics/diceAnimation.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
