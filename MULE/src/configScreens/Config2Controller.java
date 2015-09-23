@@ -24,13 +24,10 @@ public class Config2Controller {
     private ComboBox<String> combo1human, combo2human, combo3human, combo4human;
     @FXML
     private Label errorLabel;
-
-
-
-
+    @FXML
+    private TextField p1Name, p2Name, p3Name, p4Names;
 
     public ArrayList<Player> players = new ArrayList<Player>();
-
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
     ObservableList<String> raceBox = FXCollections.observableArrayList("Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite");
