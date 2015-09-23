@@ -22,13 +22,8 @@ public class StandardMapController {
     private Button button00, button01, button02, button03, button04, button05, button06, button07, button08, button09;
 
     @FXML
-    private void okayButtonAction(ActionEvent event) throws IOException {
-        Stage stage;
-        Button source = (Button) event.getSource();
-        stage = (Stage) source.getScene().getWindow();
-        if (source == okayButton) {
-            stage.close();
-        }
+    private void Button00Action(ActionEvent event) throws IOException {
+
     }
 
 
