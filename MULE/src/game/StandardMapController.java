@@ -32,27 +32,26 @@ public class StandardMapController {
 
     int[][] mapOfbuttons = new int[5][9]; //initialized to 5x9 grid of 0s, 1 means button is pressed
 
-    @FXML
-<<<<<<< HEAD
+
+
+/* This is the logic to loop through the Players to purchase property at the beginning*/
+// for (int i = 0; i < Config2Controller.gameMap.players.size() * 2; i++) {
+//        if (source == button00) {
+//            //add tile color graphic
+//            Config2Controller.currentPlayer.addProperty(new Location(0, 0));
+//            if (i % 2 == 0) {//every player picks twice
+//                Config2Controller.currentPlayer = Config2Controller.gameMap.players.get(Config2Controller.currentPlayer.getPlayerNumber());
+//            }
+//            System.out.print(Config2Controller.currentPlayer.name);
+//        }
+//    }
+
     private void buttonHandler(ActionEvent event) throws IOException {
-=======
-    private void Button00Action(ActionEvent event) throws IOException {
->>>>>>> origin/master
-        Stage stage;
-        Parent root;
+//        Stage stage;
+//        Parent root;
         Button source = (Button) event.getSource();
-        stage = (Stage) source.getScene().getWindow();
-<<<<<<< HEAD
-        for (int i = 0; i < Config2Controller.gameMap.players.size() * 2; i++) {
-            if (source == button00) {
-                //add tile color graphic
-                Config2Controller.currentPlayer.addProperty(new Location(0, 0));
-                if (i % 2 == 0)//every player picks twice
-                Config2Controller.currentPlayer = Config2Controller.gameMap.players.get(Config2Controller.currentPlayer.getPlayerNumber());
-                System.out.print(Config2Controller.currentPlayer.name);
-            }
-        }
-=======
+//        stage = (Stage) source.getScene().getWindow();
+
         if (source == button00) {
             System.out.println("this works0");
         } else if (source == button01) {
@@ -90,8 +89,6 @@ public class StandardMapController {
         } else if (source == button18) {
             System.out.println("this works17");
         }
-
->>>>>>> origin/master
     }
 
     @FXML

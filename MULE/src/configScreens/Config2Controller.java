@@ -39,56 +39,35 @@ public class Config2Controller {
 
     @FXML
     private void config2ButtonAction(ActionEvent event) throws IOException {
-        Stage stageOriginal;
+        Stage stage;
         Parent root;
         Button source = (Button) event.getSource();
-        stageOriginal = (Stage) source.getScene().getWindow();
+        stage = (Stage) source.getScene().getWindow();
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
                 root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
                 Scene scene = new Scene(root);
-                stageOriginal.setScene(scene);
-                stageOriginal.show();
+                stage.setScene(scene);
+                stage.show();
 
-                //popup window asking player
-<<<<<<< HEAD
+        for (int i = 0; i < players.size(); i++) {
+            stage = new Stage();
+            root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+            stage.setScene(new Scene(root));
+            stage.setTitle("Purchase Property for Player " + (i + 1));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.initOwner(source.getScene().getWindow());
+            stage.showAndWait();
+        }
 
-                stage = new Stage();
-                root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-                stage.setScene(new Scene(root));
-                stage.setTitle("Purchase Property for Player " + (1));
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.initOwner(source.getScene().getWindow());
-                stage.showAndWait();
-=======
-                for (int i = 0; i < players.size(); i++) {
-                    Stage stage = new Stage();
-                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Purchase Property for Player " + (i + 1));
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.initOwner(source.getScene().getWindow());
-                    stage.showAndWait();
-                    stageOriginal.show();
-                    //stage = (Stage) source.getScene().getWindow();
-                    //root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
-                    //stage.setScene(scene);
-                    //stage.show();
-
-
-                    //this is where selecting tile logic should go
-
-                }
->>>>>>> origin/master
-
-            } else {
-                errorLabel.setVisible(true);
-            }
+        } else {
+            errorLabel.setVisible(true);
+        }
         } else {
             root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
             Scene scene = new Scene(root);
-            stageOriginal.setScene(scene);
-            stageOriginal.show();
+            stage.setScene(scene);
+            stage.show();
         }
 
     }
