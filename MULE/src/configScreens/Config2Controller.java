@@ -36,6 +36,7 @@ public class Config2Controller {
     public static ArrayList<Player> players = new ArrayList<Player>();
     public static Map gameMap = null;
     public static Player currentPlayer = null;
+    public static boolean hasSelected = true;
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
     ObservableList<String> raceBox = FXCollections.observableArrayList("Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite");
@@ -53,7 +54,7 @@ public class Config2Controller {
                 stage.setScene(scene);
                 stage.show();
 
-                boolean hasSelected = true;
+
                 int playerNumber = 0;
                 for (int i = 0; i < players.size() * 2; i++) {
                     //popup
