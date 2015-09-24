@@ -36,7 +36,6 @@ public class Config2Controller {
     public static ArrayList<Player> players = new ArrayList<Player>();
     public static Map gameMap = null;
     public static Player currentPlayer = null;
-    public static boolean hasSelected = true;
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
     ObservableList<String> raceBox = FXCollections.observableArrayList("Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite");
@@ -54,13 +53,9 @@ public class Config2Controller {
                 stage.setScene(scene);
                 stage.show();
 
-<<<<<<< Updated upstream
                 boolean hasSelected = true;
                 int playerNumber = 0;
                 for (int i = 0; i < players.size() * 2; i++) {
-=======
-                for (int i = 0; i < players.size(); i++) {
->>>>>>> Stashed changes
                     //popup
                     if (i == players.size()){
                         playerNumber = 0;
@@ -77,7 +72,7 @@ public class Config2Controller {
                     }
 
                     /*Selection phase*/
-                    System.out.println("Player number " + playerNumber + " selects 1 tile by clicking the map");//Player selects tile by clicking the map
+                    System.out.println("Player number " + playerNumber + " selects tile by clicking the map");//Player selects tile by clicking the map
                     int x = 0, y = 0; //coordinates of selected property tile
                     players.get(playerNumber).addProperty(new Location(x, y)); //adds selected property to this Player's list of properties
                     hasSelected = true; //Player is done selecting property
