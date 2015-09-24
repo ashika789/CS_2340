@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import game.Player;
+import game.Driver;
 
 import javax.xml.bind.SchemaOutputResolver;
 
@@ -44,42 +45,13 @@ public class Config2Controller {
     @FXML
     private void config2ButtonAction(ActionEvent event) throws IOException {
         Stage stage;
-        Parent root;
+        Parent root = null;
         Button source = (Button) event.getSource();
         stage = (Stage) source.getScene().getWindow();
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
-                root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-
-
-                int playerNumber = 0;
-                for (int i = 0; i < players.size() * 2; i++) {
-                    //popup
-                    if (i == players.size()){
-                        playerNumber = 0;
-                    }
-                    if (hasSelected) {
-                        stage = new Stage();
-                        root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-                        stage.setScene(new Scene(root));
-                        stage.setTitle("Purchase Property for Player " + (playerNumber + 1));
-                        stage.initModality(Modality.NONE);
-                        stage.initOwner(source.getScene().getWindow());
-                        stage.showAndWait();
-                    }
-
-                    /*Selection phase*/
-                    System.out.println("Player number " + playerNumber + " selects tile by clicking the map");//Player selects tile by clicking the map
-                    int x = 0, y = 0; //coordinates of selected property tile
-                    players.get(playerNumber).addProperty(new Location(x, y)); //adds selected property to this Player's list of properties
-                    hasSelected = true; //Player is done selecting property
-                    playerNumber++; //set playerNumber to the next player
-
-                }
-
+                Driver d = new Driver();
+                d.configure(players, root, stage, source, hasSelected);
             } else {
                 errorLabel.setVisible(true);
             }
