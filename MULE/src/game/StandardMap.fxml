@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.StandardMapController">
    <children>
       <MenuBar maxHeight="25.0" maxWidth="576.0" minHeight="25.0" minWidth="576.0" prefHeight="25.0" prefWidth="576.0">
         <menus>
@@ -91,7 +91,7 @@
             <Button fx:id="btn30" layoutX="138.0" layoutY="10.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" />
             <Button fx:id="btn20" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" />
             <Button fx:id="btn10" layoutX="74.0" layoutY="10.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" />
-            <Button fx:id="btn00" mnemonicParsing="false" prefHeight="64.0" prefWidth="64.0" text="Button" />
+            <Button fx:id="btn00" mnemonicParsing="false" onAction="#Button00Action" prefHeight="64.0" prefWidth="64.0" text="Button" />
             <ImageView fitHeight="64.0" fitWidth="64.0">
                <image>
                   <Image url="@graphics/TilePlain.png" />

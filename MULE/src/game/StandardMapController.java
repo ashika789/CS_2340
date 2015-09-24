@@ -28,6 +28,47 @@ public class StandardMapController {
 
     @FXML
     private void Button00Action(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
+        Button source = (Button) event.getSource();
+        stage = (Stage) source.getScene().getWindow();
+        if (source == button00) {
+            System.out.println("this works0");
+        } else if (source == button01) {
+            System.out.println("this works1");
+        } else if (source == button02) {
+            System.out.println("this works2");
+        } else if (source == button03) {
+            System.out.println("this works3");
+        } else if (source == button04) {
+            System.out.println("this works4");
+        } else if (source == button05) {
+            System.out.println("this works5");
+        } else if (source == button06) {
+            System.out.println("this works6");
+        } else if (source == button07) {
+            System.out.println("this works7");
+        } else if (source == button08) {
+            System.out.println("this works8");
+        } else if (source == button10) {
+            System.out.println("this works9");
+        } else if (source == button11) {
+            System.out.println("this works10");
+        } else if (source == button12) {
+            System.out.println("this works11");
+        } else if (source == button13) {
+            System.out.println("this works12");
+        } else if (source == button14) {
+            System.out.println("this works13");
+        } else if (source == button15) {
+            System.out.println("this works14");
+        } else if (source == button16) {
+            System.out.println("this works15");
+        } else if (source == button17) {
+            System.out.println("this works16");
+        } else if (source == button18) {
+            System.out.println("this works17");
+        }
 
     }
 
