@@ -46,7 +46,6 @@ public class Config2Controller {
                 stage.show();
 
                 //popup window asking player
-                System.out.println(players);
                 for (int i = 0; i < players.size(); i++) {
                     stage = new Stage();
                     root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
@@ -55,6 +54,15 @@ public class Config2Controller {
                     stage.initModality(Modality.APPLICATION_MODAL);
                     stage.initOwner(source.getScene().getWindow());
                     stage.showAndWait();
+
+                    stage = (Stage) source.getScene().getWindow();
+                    root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
+                    stage.setScene(scene);
+                    stage.show();
+
+
+                    //this is where selecting tile logic should go
+
                 }
 
             } else {

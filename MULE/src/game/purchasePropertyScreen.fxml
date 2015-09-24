@@ -15,7 +15,7 @@
             <Font name="Georgia" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="90.0" layoutY="81.0" text="Select two tiles of land to buy.">
+      <Label layoutX="102.0" layoutY="81.0" text="Select 1 tile of land to buy.">
          <font>
             <Font name="Georgia" size="14.0" />
          </font>

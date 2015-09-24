@@ -20,6 +20,7 @@ public class PurchasePropertyController {
     
     @FXML
     private void okayButtonAction(ActionEvent event) throws IOException {
+        Parent root;
         Stage stage;
         Button source = (Button) event.getSource();
         stage = (Stage) source.getScene().getWindow();
