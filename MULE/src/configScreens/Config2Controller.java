@@ -17,6 +17,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import game.Player;
+
+import javax.xml.bind.SchemaOutputResolver;
+
 public class Config2Controller {
 
     @FXML
@@ -51,21 +54,29 @@ public class Config2Controller {
                 stage.show();
 
                 boolean hasSelected = true;
-                for (int i = 0; i < players.size(); i++) {
+                int playerNumber = 0;
+                for (int i = 0; i < players.size() * 2; i++) {
                     //popup
+                    if (i == players.size()){
+                        playerNumber = 0;
+                    }
                     if (hasSelected) {
                         stage = new Stage();
                         root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
                         stage.setScene(new Scene(root));
-                        stage.setTitle("Purchase Property for Player X");
+                        stage.setTitle("Purchase Property for Player " + (playerNumber + 1));
                         stage.initModality(Modality.NONE);
                         stage.initOwner(source.getScene().getWindow());
                         stage.showAndWait();
                         hasSelected = false;
                     }
 
-                    //selection phase, player must select tile by clicking the map
-                    //reset flag to true
+                    /*Selection phase*/
+                    System.out.println("Player number " + playerNumber + " selects 1 tile by clicking the map");//Player selects tile by clicking the map
+                    int x = 0, y = 0; //coordinates of selected property tile
+                    players.get(playerNumber).addProperty(new Location(x, y)); //adds selected property to this Player's list of properties
+                    hasSelected = true; //Player is done selecting property
+                    playerNumber++; //set playerNumber to the next player
 
                 }
 
