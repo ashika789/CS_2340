@@ -22,21 +22,21 @@ import java.util.ArrayList;
 public class StandardMapController {
 
     @FXML
-    private Button button00, button01, button02, button03, button04, button05, button06, button07, button08;
+    private Button btn00, btn01, btn02, btn03, btn04, btn05, btn06, btn07, btn08;
     @FXML
-    private Button button10, button11, button12, button13, button14, button15, button16, button17, button18;
+    private Button btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17, btn18;
     @FXML
-    private Button button20, button21, button22, button23, button24, button25, button26, button27, button28;
+    private Button btn20, btn21, btn22, btn23, btn24, btn25, btn26, btn27, btn28;
     @FXML
-    private Button button30, button31, button32, button33, button34, button35, button36, button37, button38;
+    private Button btn30, btn31, btn32, btn33, btn34, btn35, btn36, btn37, btn38;
 
-    int[][] mapOfbuttons = new int[5][9]; //initialized to 5x9 grid of 0s, 1 means button is pressed
+    int[][] mapOfbtns = new int[5][9]; //initialized to 5x9 grid of 0s, 1 means btn is pressed
 
+    @FXML
 
-
-/* This is the logic to loop through the Players to purchase property at the beginning*/
+/* This is the logic to loop through the Players to purchase property at the g*/
 // for (int i = 0; i < Config2Controller.gameMap.players.size() * 2; i++) {
-//        if (source == button00) {
+//        if (source == btn00) {
 //            //add tile color graphic
 //            Config2Controller.currentPlayer.addProperty(new Location(0, 0));
 //            if (i % 2 == 0) {//every player picks twice
@@ -47,46 +47,42 @@ public class StandardMapController {
 //    }
 
     private void buttonHandler(ActionEvent event) throws IOException {
-//        Stage stage;
-//        Parent root;
         Button source = (Button) event.getSource();
-//        stage = (Stage) source.getScene().getWindow();
-
-        if (source == button00) {
+        if (source == btn00) {
             System.out.println("this works0");
-        } else if (source == button01) {
+        } else if (source == btn01) {
             System.out.println("this works1");
-        } else if (source == button02) {
+        } else if (source == btn02) {
             System.out.println("this works2");
-        } else if (source == button03) {
+        } else if (source == btn03) {
             System.out.println("this works3");
-        } else if (source == button04) {
+        } else if (source == btn04) {
             System.out.println("this works4");
-        } else if (source == button05) {
+        } else if (source == btn05) {
             System.out.println("this works5");
-        } else if (source == button06) {
+        } else if (source == btn06) {
             System.out.println("this works6");
-        } else if (source == button07) {
+        } else if (source == btn07) {
             System.out.println("this works7");
-        } else if (source == button08) {
+        } else if (source == btn08) {
             System.out.println("this works8");
-        } else if (source == button10) {
+        } else if (source == btn10) {
             System.out.println("this works9");
-        } else if (source == button11) {
+        } else if (source == btn11) {
             System.out.println("this works10");
-        } else if (source == button12) {
+        } else if (source == btn12) {
             System.out.println("this works11");
-        } else if (source == button13) {
+        } else if (source == btn13) {
             System.out.println("this works12");
-        } else if (source == button14) {
+        } else if (source == btn14) {
             System.out.println("this works13");
-        } else if (source == button15) {
+        } else if (source == btn15) {
             System.out.println("this works14");
-        } else if (source == button16) {
+        } else if (source == btn16) {
             System.out.println("this works15");
-        } else if (source == button17) {
+        } else if (source == btn17) {
             System.out.println("this works16");
-        } else if (source == button18) {
+        } else if (source == btn18) {
             System.out.println("this works17");
         }
     }
@@ -95,10 +91,6 @@ public class StandardMapController {
     private void fileCloseAction(ActionEvent event) throws IOException {
         Platform.exit();
     }
-
-
-
-
 
 
     public void initialize() throws IOException {

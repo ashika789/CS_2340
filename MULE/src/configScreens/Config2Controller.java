@@ -50,19 +50,19 @@ public class Config2Controller {
                 stage.setScene(scene);
                 stage.show();
 
-        for (int i = 0; i < players.size(); i++) {
-            stage = new Stage();
-            root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-            stage.setScene(new Scene(root));
-            stage.setTitle("Purchase Property for Player " + (i + 1));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.initOwner(source.getScene().getWindow());
-            stage.showAndWait();
-        }
+                for (int i = 0; i < players.size(); i++) {
+                    stage = new Stage();
+                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                    stage.setScene(new Scene(root));
+                    stage.setTitle("Purchase Property for Player " + (i + 1));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.initOwner(source.getScene().getWindow());
+                    stage.showAndWait();
+                }
 
-        } else {
-            errorLabel.setVisible(true);
-        }
+            } else {
+                errorLabel.setVisible(true);
+            }
         } else {
             root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
             Scene scene = new Scene(root);
