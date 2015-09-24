@@ -9,4 +9,5 @@ gradle/.gradle/1.10/taskArtifacts/cache.properties.lock
 
 *.class
 
+MULE/.idea
 MULE/.idea/workspace.xml

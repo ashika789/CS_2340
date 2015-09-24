@@ -39,18 +39,19 @@ public class Config2Controller {
 
     @FXML
     private void config2ButtonAction(ActionEvent event) throws IOException {
-        Stage stage;
+        Stage stageOriginal;
         Parent root;
         Button source = (Button) event.getSource();
-        stage = (Stage) source.getScene().getWindow();
+        stageOriginal = (Stage) source.getScene().getWindow();
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
                 root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
                 Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
+                stageOriginal.setScene(scene);
+                stageOriginal.show();
 
                 //popup window asking player
+<<<<<<< HEAD
 
                 stage = new Stage();
                 root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
@@ -59,6 +60,26 @@ public class Config2Controller {
                 stage.initModality(Modality.APPLICATION_MODAL);
                 stage.initOwner(source.getScene().getWindow());
                 stage.showAndWait();
+=======
+                for (int i = 0; i < players.size(); i++) {
+                    Stage stage = new Stage();
+                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                    stage.setScene(new Scene(root));
+                    stage.setTitle("Purchase Property for Player " + (i + 1));
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.initOwner(source.getScene().getWindow());
+                    stage.showAndWait();
+                    stageOriginal.show();
+                    //stage = (Stage) source.getScene().getWindow();
+                    //root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
+                    //stage.setScene(scene);
+                    //stage.show();
+
+
+                    //this is where selecting tile logic should go
+
+                }
+>>>>>>> origin/master
 
             } else {
                 errorLabel.setVisible(true);
@@ -66,8 +87,8 @@ public class Config2Controller {
         } else {
             root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
             Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            stageOriginal.setScene(scene);
+            stageOriginal.show();
         }
 
     }
