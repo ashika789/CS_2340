@@ -69,7 +69,6 @@ public class Config2Controller {
                         stage.initModality(Modality.NONE);
                         stage.initOwner(source.getScene().getWindow());
                         stage.showAndWait();
-                        hasSelected = false;
                     }
 
                     /*Selection phase*/
