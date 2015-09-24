@@ -1,5 +1,7 @@
 package configScreens;
 
+import game.Location;
+import game.Map;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,10 +12,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.util.ArrayList;
-import game.Player;
 
+import game.Player;
 public class Config2Controller {
 
     @FXML
@@ -27,7 +30,9 @@ public class Config2Controller {
     @FXML
     private TextField p1Name, p2Name, p3Name, p4Names;
 
-    public ArrayList<Player> players = new ArrayList<Player>();
+    public static ArrayList<Player> players = new ArrayList<Player>();
+    public static Map gameMap = null;
+    public static Player currentPlayer = null;
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
     ObservableList<String> raceBox = FXCollections.observableArrayList("Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite");
@@ -46,16 +51,14 @@ public class Config2Controller {
                 stage.show();
 
                 //popup window asking player
-                System.out.println(players);
-                for (int i = 0; i < players.size(); i++) {
-                    stage = new Stage();
-                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Purchase Property for Player " + (i + 1));
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.initOwner(source.getScene().getWindow());
-                    stage.showAndWait();
-                }
+
+                stage = new Stage();
+                root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                stage.setScene(new Scene(root));
+                stage.setTitle("Purchase Property for Player " + (1));
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initOwner(source.getScene().getWindow());
+                stage.showAndWait();
 
             } else {
                 errorLabel.setVisible(true);
@@ -75,8 +78,8 @@ public class Config2Controller {
         if (combo1human.getValue() == "Not playing") {
             players[0] = true;
         } else if (combo1human.getValue() != null && combo1race.getValue() != null) {
-                players[0] = true;
-                this.players.add(new Player("Player 1", combo1human.getValue(), combo1race.getValue(), 1));
+            players[0] = true;
+            this.players.add(new Player("Player 1", combo1human.getValue(), combo1race.getValue(), 1));
             //after names are added, add name parameter to game.Player ctor
         }
         if (combo2human.getValue() == "Not playing") {
@@ -97,7 +100,9 @@ public class Config2Controller {
             players[3] = true;
             this.players.add(new Player("Player 4", combo1human.getValue(), combo1race.getValue(), 1));
         }
-        if (players[0] && players[1] && players[0] && players[0] ) {
+        if (players[0] && players[1] && players[0] && players[0]) {
+            gameMap = new Map(new Location[5][9], this.players);
+            currentPlayer = this.players.get(0);
             return true;
         } else {
             return false;

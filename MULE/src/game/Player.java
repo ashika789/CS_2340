@@ -102,4 +102,8 @@ public class Player {
 
     public int getPlayerNumber() {return playerNumber;}
 
+    public void addProperty(Location loc) {
+        properties.add(loc);
+    }
+
 }

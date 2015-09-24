@@ -18,11 +18,6 @@ public class Map {
     public Map(Location[][] grid, ArrayList<Player> players ) {
         this.grid = grid;
         this.players = players;
+
     }
-
-
-
-
-
-
 }
