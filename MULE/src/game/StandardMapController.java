@@ -1,5 +1,6 @@
 package game;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -71,6 +72,13 @@ public class StandardMapController {
         }
 
     }
+
+    @FXML
+    private void fileCloseAction(ActionEvent event) throws IOException {
+        Platform.exit();
+    }
+
+
 
 
 
