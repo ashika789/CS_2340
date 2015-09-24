@@ -45,19 +45,30 @@ public class Config2Controller {
         stage = (Stage) source.getScene().getWindow();
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
-                root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
+//                root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
+//                Scene scene = new Scene(root);
+//                stage.setScene(scene);
+//                stage.show();
 
                 for (int i = 0; i < players.size(); i++) {
+
+                    //popup
                     stage = new Stage();
                     root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
                     stage.setScene(new Scene(root));
-                    stage.setTitle("Purchase Property for Player " + (i + 1));
-                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.setTitle("Purchase Property for Player X");
+                    stage.initModality(Modality.NONE);
                     stage.initOwner(source.getScene().getWindow());
                     stage.showAndWait();
+
+                    stage = (Stage) source.getScene().getWindow();
+                    stage.close();
+                    stage.show();
+
+
+                    //
+
+
                 }
 
             } else {
@@ -73,7 +84,6 @@ public class Config2Controller {
     }
 
     private boolean verifyComboBoxes() {
-        //need to add names,
         boolean[] players = {false, false, false, false};
         if (combo1human.getValue() == "Not playing") {
             players[0] = true;
