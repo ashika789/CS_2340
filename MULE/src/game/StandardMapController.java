@@ -50,13 +50,7 @@ public class StandardMapController {
         } else if (source.equals(btn02)) {
             System.out.println("this works2");
             Config2Controller.hasSelected = false;
-        } else if (source.equals(btn03)) {
-            System.out.println("this works3");
-            Config2Controller.hasSelected = false;
-        } else if (source.equals(btn04)) {
-            System.out.println("this works4");
-            Config2Controller.hasSelected = false;
-        } 
+        }
     }
 
     @FXML
