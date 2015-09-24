@@ -27,11 +27,6 @@ public class PurchasePropertyController {
         if (source == okayButton) {
             stage.close();
 
-            root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-
 
         }
     }

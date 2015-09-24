@@ -45,29 +45,27 @@ public class Config2Controller {
         stage = (Stage) source.getScene().getWindow();
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
-//                root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
-//                Scene scene = new Scene(root);
-//                stage.setScene(scene);
-//                stage.show();
+                root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
 
+                boolean hasSelected = true;
                 for (int i = 0; i < players.size(); i++) {
-
                     //popup
-                    stage = new Stage();
-                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Purchase Property for Player X");
-                    stage.initModality(Modality.NONE);
-                    stage.initOwner(source.getScene().getWindow());
-                    stage.showAndWait();
+                    if (hasSelected) {
+                        stage = new Stage();
+                        root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                        stage.setScene(new Scene(root));
+                        stage.setTitle("Purchase Property for Player X");
+                        stage.initModality(Modality.NONE);
+                        stage.initOwner(source.getScene().getWindow());
+                        stage.showAndWait();
+                        hasSelected = false;
+                    }
 
-                    stage = (Stage) source.getScene().getWindow();
-                    stage.close();
-                    stage.show();
-
-
-                    //
-
+                    //selection phase, player must select tile by clicking the map
+                    //reset flag to true
 
                 }
 
