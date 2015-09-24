@@ -22,15 +22,15 @@ import java.util.ArrayList;
 public class StandardMapController {
 
     @FXML
-    private Button btn00, btn01, btn02, btn03, btn04, btn05, btn06, btn07, btn08;
+    private Button button00, button01, button02, button03, button04, button05, button06, button07, button08;
     @FXML
-    private Button btn10, btn11, btn12, btn13, btn14, btn15, btn16, btn17, btn18;
+    private Button button10, button11, button12, button13, button14, button15, button16, button17, button18;
     @FXML
-    private Button btn20, btn21, btn22, btn23, btn24, btn25, btn26, btn27, btn28;
+    private Button button20, button21, button22, button23, button24, button25, button26, button27, button28;
     @FXML
-    private Button btn30, btn31, btn32, btn33, btn34, btn35, btn36, btn37, btn38;
+    private Button button30, button31, button32, button33, button34, button35, button36, button37, button38;
 
-    int[][] mapOfbtns = new int[5][9]; //initialized to 5x9 grid of 0s, 1 means btn is pressed
+    int[][] mapOfbuttons = new int[5][9]; //initialized to 5x9 grid of 0s, 1 means button is pressed
 
     @FXML
 <<<<<<< HEAD
@@ -44,7 +44,7 @@ public class StandardMapController {
         stage = (Stage) source.getScene().getWindow();
 <<<<<<< HEAD
         for (int i = 0; i < Config2Controller.gameMap.players.size() * 2; i++) {
-            if (source == btn00) {
+            if (source == button00) {
                 //add tile color graphic
                 Config2Controller.currentPlayer.addProperty(new Location(0, 0));
                 if (i % 2 == 0)//every player picks twice
