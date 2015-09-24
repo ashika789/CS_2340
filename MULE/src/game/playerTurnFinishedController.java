@@ -18,7 +18,7 @@ import java.io.IOException;
 public class playerTurnFinishedController {
 
         @FXML
-        private Button popUp1;
+        private Button editAbout;
 
         @FXML
         private Label errorLabel;
@@ -29,8 +29,8 @@ public class playerTurnFinishedController {
             Parent root;
             Button source = (Button) event.getSource();
             stage = (Stage) source.getScene().getWindow();
-            if (source == popUp1) {
-                root = FXMLLoader.load(getClass().getResource("StandardMap.fxml"));
+            if (source == editAbout) {
+                root = FXMLLoader.load(getClass().getResource("/game/playerTurnFinished.fxml"));
             } else {
                 root = null;
             }
