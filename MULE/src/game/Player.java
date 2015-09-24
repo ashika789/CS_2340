@@ -7,18 +7,18 @@ import java.util.ArrayList;
  */
 public class Player {
 
-    Location loc;
-    ArrayList<Location> properties;
-    String name;
-    String type; //"Human", "AI", "Not playing"
-    String race; //"Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite"
+    private Location loc;
+    private ArrayList<Location> properties;
+    private String name;
+    private String type; //"Human", "AI", "Not playing"
+    private String race; //"Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite"
 
-    double food;
-    double energy;
-    double crystite;
-    double smithore;
-    int mule;
-    int playerNumber;
+    private double food;
+    private double energy;
+    private double crystite;
+    private double smithore;
+    private int mule;
+    private int playerNumber;
 
     //default ctor
     //default ctor's playerNumber is 0. Not sure why we even need a default character
@@ -59,6 +59,17 @@ public class Player {
         mule = 0;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getRace() {
+        return race;
+    }
 
     public void addFood(double x) {
         food += x;

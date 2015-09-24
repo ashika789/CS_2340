@@ -39,7 +39,7 @@ public class Driver {
                 stage = new Stage();
                 root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
                 stage.setScene(new Scene(root));
-                stage.setTitle("Purchase Property for Player " + (playerNumber + 1));
+                stage.setTitle("Purchase Property for " + players.get(playerNumber).getName());
                 stage.initModality(Modality.NONE);
                 stage.initOwner(source.getScene().getWindow());
                 stage.showAndWait();

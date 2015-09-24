@@ -32,11 +32,10 @@ public class Config2Controller {
     @FXML
     private Label errorLabel;
     @FXML
-    private TextField p1Name, p2Name, p3Name, p4Names;
+    private TextField p1Name, p2Name, p3Name, p4Name;
 
     public static ArrayList<Player> players = new ArrayList<Player>();
     public static Map gameMap = null;
-    public static Player currentPlayer = null;
     public static boolean hasSelected = true;
 
     ObservableList<String> humanBox = FXCollections.observableArrayList("Human", "AI", "Not playing");
@@ -51,6 +50,7 @@ public class Config2Controller {
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
                 Driver d = new Driver();
+
                 d.configure(players, root, stage, source, hasSelected);
             } else {
                 errorLabel.setVisible(true);
@@ -70,30 +70,29 @@ public class Config2Controller {
             players[0] = true;
         } else if (combo1human.getValue() != null && combo1race.getValue() != null) {
             players[0] = true;
-            this.players.add(new Player("Player 1", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player(p1Name.getText(), combo1human.getValue(), combo1race.getValue(), 1));
             //after names are added, add name parameter to game.Player ctor
         }
         if (combo2human.getValue() == "Not playing") {
             players[1] = true;
         } else if (combo2human.getValue() != null && combo2race.getValue() != null) {
             players[1] = true;
-            this.players.add(new Player("Player 2", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player(p2Name.getText(), combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (combo3human.getValue() == "Not playing") {
             players[2] = true;
         } else if (combo3human.getValue() != null && combo3race.getValue() != null) {
             players[2] = true;
-            this.players.add(new Player("Player 3", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player(p3Name.getText(), combo1human.getValue(), combo1race.getValue(), 1));
         }
         if (combo4human.getValue() == "Not playing") {
             players[3] = true;
         } else if (combo4human.getValue() != null && combo4race.getValue() != null) {
             players[3] = true;
-            this.players.add(new Player("Player 4", combo1human.getValue(), combo1race.getValue(), 1));
+            this.players.add(new Player(p4Name.getText(), combo1human.getValue(), combo1race.getValue(), 1));
         }
-        if (players[0] && players[1] && players[0] && players[0]) {
+        if (players[0] && players[1] && players[2] && players[3]) {
             gameMap = new Map(new Location[5][9], this.players);
-            currentPlayer = this.players.get(0);
             return true;
         } else {
             return false;
