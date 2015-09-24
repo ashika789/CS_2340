@@ -40,9 +40,21 @@ public class StandardMapController {
 
     @FXML
     private void buttonHandler(ActionEvent event) throws IOException {
-        ImageView source = (ImageView) event.getSource();
+        Button source = (Button) event.getSource();
         if (source.equals(btn00)) {
             System.out.println("this works0");
+            Config2Controller.hasSelected = false;
+        } else if (source.equals(btn01)) {
+            System.out.println("this works1");
+            Config2Controller.hasSelected = false;
+        } else if (source.equals(btn02)) {
+            System.out.println("this works2");
+            Config2Controller.hasSelected = false;
+        } else if (source.equals(btn03)) {
+            System.out.println("this works3");
+            Config2Controller.hasSelected = false;
+        } else if (source.equals(btn04)) {
+            System.out.println("this works4");
             Config2Controller.hasSelected = false;
         } 
     }

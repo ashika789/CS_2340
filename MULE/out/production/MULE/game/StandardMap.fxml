@@ -93,11 +93,12 @@
             <Button fx:id="btn10" layoutX="74.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" />
             <Button fx:id="btn00" mnemonicParsing="false" onAction="#buttonHandler" prefHeight="64.0" prefWidth="64.0" text="Button" />
 
-                              <ImageView fitHeight="64.0" fitWidth="64.0" onMouseClicked="#buttonHandler">
-               <image>
-                  <Image url="@graphics/TilePlain.png" />
-               </image>
-            </ImageView>
+            <!--<ImageView fx:id="button00" fitHeight="64.0" fitWidth="64.0" onMouseClicked="#buttonHandler">-->
+               <!--<image>-->
+                  <!--<Image url="@graphics/TilePlain.png" />-->
+               <!--</image>-->
+            <!--</ImageView>-->
+
             <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4">
                <image>
                   <Image url="@graphics/TileRiver.png" />
