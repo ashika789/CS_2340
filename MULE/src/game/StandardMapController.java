@@ -38,23 +38,10 @@ public class StandardMapController {
     int[][] mapOfbtns = new int[5][9]; //initialized to 5x9 grid of 0s, 1 means btn is pressed
 
 
-
-/* This is the logic to loop through the Players to purchase property at the g*/
-// for (int i = 0; i < Config2Controller.gameMap.players.size() * 2; i++) {
-//        if (source == btn00) {
-//            //add tile color graphic
-//            Config2Controller.currentPlayer.addProperty(new Location(0, 0));
-//            if (i % 2 == 0) {//every player picks twice
-//                Config2Controller.currentPlayer = Config2Controller.gameMap.players.get(Config2Controller.currentPlayer.getPlayerNumber());
-//            }
-//            System.out.print(Config2Controller.currentPlayer.name);
-//        }
-//    }
-
     @FXML
     private void buttonHandler(ActionEvent event) throws IOException {
         ImageView source = (ImageView) event.getSource();
-        if (source.equals(button00)) {
+        if (source.equals(btn00)) {
             System.out.println("this works0");
             Config2Controller.hasSelected = false;
         } 
@@ -64,7 +51,6 @@ public class StandardMapController {
     private void fileCloseAction(ActionEvent event) throws IOException {
         Platform.exit();
     }
-
 
     public void initialize() throws IOException {
 
