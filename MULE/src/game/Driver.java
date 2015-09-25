@@ -23,34 +23,34 @@ public class Driver {
     private Stage stage;
     private Parent root;
     private ArrayList<String> plainURLS = new ArrayList<String>() {{
-        add("file:graphics/TilePlainP1.png");
-        add("file:graphics/TilePlainP2.png");
-        add("file:graphics/TilePlainP3.png");
-        add("file:graphics/TilePlainP4.png");
+        add("file:/src/game/graphics/TilePlainP1.png");
+        add("file:/src/game/graphics/TilePlainP2.png");
+        add("file:/src/game/graphics/TilePlainP3.png");
+        add("file:/src/game/graphics/TilePlainP4.png");
     }};
     private ArrayList<String> riverURLS = new ArrayList<String>() {{
-        add("file:graphics/TileRiverP1.png");
-        add("file:graphics/TileRiverP2.png");
-        add("file:graphics/TileRiverP3.png");
-        add("file:graphics/TileRiverP4.png");
+        add("file:/src/game/graphics/TileRiverP1.png");
+        add("file:/src/game/graphics/TileRiverP2.png");
+        add("file:/src/game/graphics/TileRiverP3.png");
+        add("file:/src/game/graphics/TileRiverP4.png");
     }};
     private ArrayList<String> m1URLS = new ArrayList<String>() {{
-        add("file:graphics/TileMountain1P1.png");
-        add("file:graphics/TileMountain1P2.png");
-        add("file:graphics/TileMountain1P3.png");
-        add("file:graphics/TileMountain1P4.png");
+        add("file:/src/game/graphics/TileMountain1P1.png");
+        add("file:/src/game/graphics/TileMountain1P2.png");
+        add("file:/src/game/graphics/TileMountain1P3.png");
+        add("file:/src/game/graphics/TileMountain1P4.png");
     }};
     private ArrayList<String> m2URLS = new ArrayList<String>() {{
-        add("file:graphics/TileMountain2P1.png");
-        add("file:graphics/TileMountain2P2.png");
-        add("file:graphics/TileMountain2P3.png");
-        add("file:graphics/TileMountain2P4.png");
+        add("file:/src/game/graphics/TileMountain2P1.png");
+        add("file:/src/game/graphics/TileMountain2P2.png");
+        add("file:/src/game/graphics/TileMountain2P3.png");
+        add("file:/src/game/graphics/TileMountain2P4.png");
     }};
     private ArrayList<String> m3URLS = new ArrayList<String>() {{
-        add("file:graphics/TileMountain3P1.png");
-        add("file:graphics/TileMountain3P2.png");
-        add("file:graphics/TileMountain3P3.png");
-        add("file:graphics/TileMountain3P4.png");
+        add("file:/src/game/graphics/TileMountain3P1.png");
+        add("file:/src/game/graphics/TileMountain3P2.png");
+        add("file:/src/game/graphics/TileMountain3P3.png");
+        add("file:/src/game/graphics/TileMountain3P4.png");
     }};
 
     private ArrayList<Location> plainLocations = new ArrayList<Location>() {{
@@ -171,6 +171,7 @@ public class Driver {
         System.out.println("x" + loc.x + "y" + loc.y);
         if (containsLocation(plainLocations, loc)) {
             System.out.println("changing plain");
+            System.out.println(plainURLS.get(curPlayer));
             imgv.setImage(new Image(plainURLS.get(curPlayer)));
         } else if (containsLocation(riverLocations, loc)) {
             System.out.println("changing river");
@@ -186,8 +187,6 @@ public class Driver {
             imgv.setImage(new Image(m3URLS.get(curPlayer)));
         }
     }
-
-
 
     public boolean containsLocation(ArrayList<Location> locations, Location loc) {
         double x = loc.x;

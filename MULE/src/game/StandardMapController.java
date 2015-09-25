@@ -158,8 +158,6 @@ public class StandardMapController extends ControllerSuper{
 
 
 
-
-
     @FXML
     private ImageView button00;
 
