@@ -50,7 +50,6 @@ public class Config2Controller {
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
                 Driver d = new Driver();
-
                 d.configure(players, root, stage, source, hasSelected);
             } else {
                 errorLabel.setVisible(true);
