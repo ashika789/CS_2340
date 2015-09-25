@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="91.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@round1Start.gif" />
+            <Image url="@graphics/round1Start.gif" />
          </image>
       </ImageView>
    </children>

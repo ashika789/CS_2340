@@ -23,6 +23,8 @@ import game.Player;
  */
 public class Driver {
 
+    int roundNumber = 1;
+
     public void configure(ArrayList<Player> players, Parent root, Stage stage, Button source, boolean hasSelected) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
         Scene scene = new Scene(root);
@@ -54,5 +56,15 @@ public class Driver {
             playerNumber++; //set playerNumber to the next player
 
         }
+        startRound(root, stage);
+    }
+
+    public void startRound(Parent root, Stage stage) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("/game/startRound1Screen.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Round " + roundNumber);
+        stage.setScene(scene);
+        stage.show();
+        roundNumber++;
     }
 }
