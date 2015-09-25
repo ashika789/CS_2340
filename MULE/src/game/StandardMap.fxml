@@ -79,27 +79,27 @@
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView13" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView22" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView21" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView23" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView30" fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
@@ -109,172 +109,172 @@
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView33" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView40" fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <ImageView fx:id="imageview41" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView43" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView41" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TileRiver.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView24" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TileTown.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView34" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TileRiver.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView44" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TileRiver.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5">
+            <ImageView fx:id="imageView05" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8">
+            <ImageView fx:id="imageView08" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7">
+            <ImageView fx:id="imageView07" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView15" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView17" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView16" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView25" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView27" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView26" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView35" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView37" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView38" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView45" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView47" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView46" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2">
+            <ImageView fx:id="imageView02" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2">
                <image>
                   <Image url="@graphics/TileMountain1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView11" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TileMountain1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView20" fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TileMountain3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView31" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView42" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6">
+            <ImageView fx:id="imageView06" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6">
                <image>
                   <Image url="@graphics/TileMountain3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView18" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TileMountain3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView28" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TileMountain1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView36" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView48" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0">
+            <ImageView fx:id="imageView00" fitHeight="64.0" fitWidth="64.0">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>

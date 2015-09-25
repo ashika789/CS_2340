@@ -133,7 +133,7 @@ public class StandardMapController extends ControllerSuper{
     private ImageView imageView47;
     @FXML
     private ImageView imageView48;
-    
+
 
     @FXML
     private ImageView imageView50;
