@@ -1,5 +1,6 @@
 package game;
 
+import configScreens.ControllerSuper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +16,7 @@ import java.io.IOException;
 /**
  * Created by ashika ganesh.
  */
-public class playerTurnFinishedController {
+public class playerTurnFinishedController extends ControllerSuper {
 
         @FXML
         private Button editAbout;

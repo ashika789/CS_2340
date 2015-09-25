@@ -21,7 +21,7 @@ import game.Driver;
 
 import javax.xml.bind.SchemaOutputResolver;
 
-public class Config2Controller {
+public class Config2Controller extends ControllerSuper {
 
     @FXML
     private ComboBox<String> combo1race, combo2race, combo3race, combo4race;
@@ -49,8 +49,7 @@ public class Config2Controller {
         stage = (Stage) source.getScene().getWindow();
         if (source == config2StartBtn) {
             if (verifyComboBoxes()) {
-                Driver d = new Driver();
-                d.configure(players, root, stage, source, hasSelected);
+                driver.configure(players, root, stage, source, hasSelected);
             } else {
                 errorLabel.setVisible(true);
             }

@@ -9,7 +9,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class Config1Controller {
+public class Config1Controller extends ControllerSuper {
 
     @FXML
     private Button config1NextBtn, config1BackBtn;

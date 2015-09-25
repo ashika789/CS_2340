@@ -1,5 +1,6 @@
 package game;
 
+import configScreens.ControllerSuper;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 /**
  * Created by tuckerlocicero on 9/23/15.
  */
-public class StandardMapController {
+public class StandardMapController extends ControllerSuper{
 
     @FXML
     private Button btn00, btn01, btn02, btn03, btn04, btn05, btn06, btn07, btn08;

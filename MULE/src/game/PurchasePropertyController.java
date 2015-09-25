@@ -1,5 +1,6 @@
 package game;
 
+import configScreens.ControllerSuper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +14,7 @@ import java.io.IOException;
 /**
  * Created by yamininambiar on 9/17/15.
  */
-public class PurchasePropertyController {
+public class PurchasePropertyController extends ControllerSuper {
 
     @FXML
     private Button okayButton;

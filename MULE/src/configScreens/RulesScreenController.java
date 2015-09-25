@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * Created by AshikaGanesh on 9/21/15.
  */
-public class RulesScreenController {
+public class RulesScreenController extends ControllerSuper {
 
     @FXML
     private Button config3BackBtn;

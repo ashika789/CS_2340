@@ -9,7 +9,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class HomeController {
+public class HomeController extends ControllerSuper {
 
     @FXML
     private Button ruleBtn;
