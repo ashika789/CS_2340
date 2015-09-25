@@ -5,6 +5,7 @@ import game.Driver;
 
 public class ControllerSuper {
 
-    public Driver driver = new Driver();
+    public static Driver driver = new Driver();
+
 
 }

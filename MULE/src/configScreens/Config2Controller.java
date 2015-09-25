@@ -43,6 +43,7 @@ public class Config2Controller extends ControllerSuper {
 
     @FXML
     private void config2ButtonAction(ActionEvent event) throws IOException {
+        System.out.println("c2 driver: " + driver);
         Stage stage;
         Parent root = null;
         Button source = (Button) event.getSource();
