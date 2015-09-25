@@ -45,7 +45,10 @@ public class StandardMapController {
 
     @FXML
     private void buttonHandler(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root = null;
         Button source = (Button) event.getSource();
+        stage = (Stage) source.getScene().getWindow();
         if (source.equals(btn00) && mapOfbtns[0][0] == 0) {
             mapOfbtns[0][0] = 1;
             Config2Controller.hasSelected = true;
@@ -112,9 +115,11 @@ public class StandardMapController {
         } else if (source.equals(btn23) && mapOfbtns[3][2] == 0) {
             mapOfbtns[3][2] = 1;
             Config2Controller.hasSelected = true;
-        } else if (source.equals(btn24) && mapOfbtns[4][2] == 0) {
-            mapOfbtns[4][2] = 1;
-            Config2Controller.hasSelected = true;
+        } else if (source.equals(btn42) && mapOfbtns[4][2] == 0) {
+            root = FXMLLoader.load(getClass().getResource("insideTown.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         } else if (source.equals(btn25) && mapOfbtns[5][2] == 0) {
             mapOfbtns[5][2] = 1;
             Config2Controller.hasSelected = true;
@@ -160,7 +165,7 @@ public class StandardMapController {
         } else if (source.equals(btn41) && mapOfbtns[1][4] == 0) {
             mapOfbtns[1][4] = 1;
             Config2Controller.hasSelected = true;
-        } else if (source.equals(btn42) && mapOfbtns[2][4] == 0) {
+        } else if (source.equals(btn24) && mapOfbtns[2][4] == 0) {
             mapOfbtns[2][4] = 1;
             Config2Controller.hasSelected = true;
         } else if (source.equals(btn43) && mapOfbtns[3][4] == 0) {
