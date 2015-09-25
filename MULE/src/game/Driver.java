@@ -24,7 +24,7 @@ import game.Player;
 public class Driver {
 
     private boolean landSelection = true;
-    private int roundNumber = 1;
+    private int roundNumber;
     private ArrayList<Player> players;
     private Stage stage;
     private Parent root;
@@ -38,36 +38,8 @@ public class Driver {
         this.players = players;
         this.stage = stage;
         this.root = root;
+        roundNumber = 1;
         int playerNumber = 0;
-        for (int i = 0; i < players.size() * 2; i++) {
-            //popup
-            if (i == players.size()) {
-                playerNumber = 0;
-            }
-            if (hasSelected) {
-
-                hasSelected = false;
-            }
-
-            /*Selection phase*/
-            System.out.println("Player number " + playerNumber + " selects tile by clicking the map");//Player selects tile by clicking the map
-            int x = 0, y = 0; //coordinates of selected property tile
-            players.get(playerNumber).addProperty(new Location(x, y)); //adds selected property to this Player's list of properties
-            hasSelected = true; //Player is done selecting property
-            playerNumber++; //set playerNumber to the next player
-
-        }
-        startRound(root, stage);
-    }
-
-    public void selectProperty(Location loc, Button source) throws IOException {
-        if (roundNumber == players.size() * 2) {
-            //get out of selection phase
-            landSelection = false;
-            roundNumber = 1;
-        }
-        int playerNumber = roundNumber % players.size();
-        players.get(playerNumber).addProperty(loc);
         stage = new Stage();
         root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
         stage.setScene(new Scene(root));
@@ -75,7 +47,28 @@ public class Driver {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.initOwner(source.getScene().getWindow());
         stage.showAndWait();
-        roundNumber++;
+    }
+
+    public void selectProperty(Location loc, Button source) throws IOException {
+        if (landSelection) {
+            int playerNumber = (roundNumber - 1) % players.size();
+            players.get(playerNumber).addProperty(loc);
+            if (roundNumber == players.size() * 2) {
+                //get out of selection phase
+                landSelection = false;
+                roundNumber = 1;
+                startRound(root, stage);
+            } else {
+                stage = new Stage();
+                root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                stage.setScene(new Scene(root));
+                stage.setTitle("Purchase Property for " + players.get(playerNumber).getName());
+                stage.initModality(Modality.APPLICATION_MODAL);
+                stage.initOwner(source.getScene().getWindow());
+                stage.showAndWait();
+                roundNumber++;
+            }
+        }
     }
 
     public void startRound(Parent root, Stage stage) throws IOException {
