@@ -1,28 +1,15 @@
 package game;
-import game.Location;
-import game.Map;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.*;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import javafx.scene.image.ImageView;
-
-import game.Player;
 
 
 /**
@@ -35,11 +22,35 @@ public class Driver {
     private ArrayList<Player> players;
     private Stage stage;
     private Parent root;
-    private ArrayList<String> selectorImagesURLS = new ArrayList<String>() {{
-        add("file:graphics/p1Selector.png");
-        add("file:graphics/p2Selector.png");
-        add("file:graphics/p3Selector.png");
-        add("file:graphics/p4Selector.png");
+    private ArrayList<String> plainURLS = new ArrayList<String>() {{
+        add("file:graphics/TilePlainP1.png");
+        add("file:graphics/TilePlainP2.png");
+        add("file:graphics/TilePlainP3.png");
+        add("file:graphics/TilePlainP4.png");
+    }};
+    private ArrayList<String> riverURLS = new ArrayList<String>() {{
+        add("file:graphics/TileRiverP1.png");
+        add("file:graphics/TileRiverP2.png");
+        add("file:graphics/TileRiverP3.png");
+        add("file:graphics/TileRiverP4.png");
+    }};
+    private ArrayList<String> m1URLS = new ArrayList<String>() {{
+        add("file:graphics/TileMountain1P1.png");
+        add("file:graphics/TileMountain1P2.png");
+        add("file:graphics/TileMountain1P3.png");
+        add("file:graphics/TileMountain1P4.png");
+    }};
+    private ArrayList<String> m2URLS = new ArrayList<String>() {{
+        add("file:graphics/TileMountain2P1.png");
+        add("file:graphics/TileMountain2P2.png");
+        add("file:graphics/TileMountain2P3.png");
+        add("file:graphics/TileMountain2P4.png");
+    }};
+    private ArrayList<String> m3URLS = new ArrayList<String>() {{
+        add("file:graphics/TileMountain3P1.png");
+        add("file:graphics/TileMountain3P2.png");
+        add("file:graphics/TileMountain3P3.png");
+        add("file:graphics/TileMountain3P4.png");
     }};
 
 
@@ -64,11 +75,11 @@ public class Driver {
         stage.showAndWait();
     }
 
-    public void selectProperty(Location loc, Button source, VBox vbox) throws IOException {
+    public void selectProperty(Location loc, Button source, ImageView imgv) throws IOException {
         if (landSelection) {
             int playerNumber = (roundNumber - 1) % players.size();
             players.get(playerNumber).addProperty(loc);
-            displaySelector(source, vbox);
+            changeTile(imgv);
             if (roundNumber == players.size() * 2) {
                 //get out of selection phase
                 landSelection = false;
@@ -97,22 +108,20 @@ public class Driver {
         startTurn();
     }
 
-    public void displaySelector(Button b, VBox vbox) throws IOException {
-        int curPlayer = (roundNumber - 1) % players.size();
+    public void changeTile(ImageView imgv) throws IOException {
+        int curPlayer = (roundNumber) % players.size();
         System.out.println(selectorImagesURLS.get(curPlayer));
-
-        javafx.scene.image.ImageView imgv = new javafx.scene.image.ImageView(selectorImagesURLS.get(curPlayer));
-
-        imgv.setFitHeight(64);
-        imgv.setFitWidth(64);
-        System.out.println("layoutX" + b.getLayoutX());
-        System.out.println("layoutY" + b.getLayoutY());
-        imgv.setX(b.getLayoutX());
-        imgv.setY(b.getLayoutY());
-        imgv.toFront();
-        b.toFront();
-
-        vbox.getChildren().add(imgv);
+        if (imgv.getImage() == "file: graphics/TilePlain.png") {
+            imgv.setImage(new Image(plainURLS.get(curPlayer)));
+        } else if (imgv.getImage() == "file: graphics/TileRiver.png") {
+            imgv.setImage(new Image(riverURLS.get(curPlayer)));
+        } else if (imgv.getImage() == "file: graphics/TileMountain1.png") {
+            imgv.setImage(new Image(m1URLS.get(curPlayer)));
+        } else if (imgv.getImage() == "file: graphics/TileMountain2.png") {
+            imgv.setImage(new Image(m2URLS.get(curPlayer)));
+        } else if (imgv.getImage() == "file: graphics/TileMountain3.png") {
+            imgv.setImage(new Image(m3URLS.get(curPlayer)));
+        }
     }
 
 
