@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 
 /**
@@ -17,8 +18,9 @@ import java.util.ArrayList;
  */
 public class Driver {
 
+    //data
     private boolean landSelection = true;
-    private int roundNumber;
+    private static int roundNumber;
     private ArrayList<Player> players;
     private Stage stage;
     private Parent root;
@@ -112,6 +114,7 @@ public class Driver {
         add(new Location(1,8));
     }};
 
+    //methods
     public void configure(ArrayList<Player> players, Parent root, Stage stage, Button source, boolean hasSelected) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
         Scene scene = new Scene(root);
@@ -135,7 +138,8 @@ public class Driver {
     public void selectProperty(Location loc, Button source, ImageView imgv) throws IOException {
         if (landSelection) {
             int playerNumber = (roundNumber - 1) % players.size();
-            players.get(playerNumber).addProperty(loc);
+            players.get(playerNumber).addProperty(loc); //add property to player's property
+            players.get(playerNumber).addMoney(-loc.getBuyingPrice()); //subtract money from player
             changeTile(loc, imgv);
             if (roundNumber == players.size() * 2) {
                 //get out of selection phase
@@ -200,7 +204,15 @@ public class Driver {
         return containsLocation;
     }
 
+    public static int getRoundNumber() {
+        return roundNumber;
+    }
 
+    //sorts based on money, from greatest to least
+    public ArrayList<Player> getTurnOrder() {
+        players.sort(new Player.PlayerComparator<Player>());
+        return players;
+    }
 
     public void startTurn() {
 
