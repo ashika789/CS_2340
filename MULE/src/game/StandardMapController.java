@@ -136,135 +136,103 @@ public class StandardMapController extends ControllerSuper{
 
 
     @FXML
-    private ImageView imageView50;
-    @FXML
-    private ImageView imageView51;
-    @FXML
-    private ImageView imageView52;
-    @FXML
-    private ImageView imageView53;
-    @FXML
-    private ImageView imageView54;
-    @FXML
-    private ImageView imageView55;
-    @FXML
-    private ImageView imageView56;
-    @FXML
-    private ImageView imageView57;
-    @FXML
-    private ImageView imageView58;
-
-
-
-
-
-
-
-    @FXML
-    private ImageView button00;
-
-    int[][] mapOfbtns = new int[5][9]; //initialized to 5x9 grid of 0s, 1 means btn is pressed
-    int c = 0;
-
-
-    @FXML
     private void buttonHandler(ActionEvent event) throws IOException {
         Stage stage;
         Parent root = null;
         Button source = (Button) event.getSource();
         stage = (Stage) source.getScene().getWindow();
-        if (source.equals(btn00) && mapOfbtns[0][0] == 0) {
+        if (source.equals(btn00)) {
             driver.selectProperty(new Location(0,0), btn00, imageView00);
-        } else if (source.equals(btn01) && mapOfbtns[1][0] == 0) {
+        } else if (source.equals(btn01)) {
             driver.selectProperty(new Location(0,1), btn01, imageView01);
-        } else if (source.equals(btn02) && mapOfbtns[2][0] == 0) {
+        } else if (source.equals(btn02)) {
             driver.selectProperty(new Location(0,2), btn02, imageView02);
-        } else if (source.equals(btn03) && mapOfbtns[3][0] == 0) {
+        } else if (source.equals(btn03)) {
             driver.selectProperty(new Location(0,3), btn03, imageView03);
-        } else if (source.equals(btn04) && mapOfbtns[4][0] == 0) {
+        } else if (source.equals(btn04)) {
             driver.selectProperty(new Location(0,4), btn04, imageView04);
-        } else if (source.equals(btn05) && mapOfbtns[5][0] == 0) {
+        } else if (source.equals(btn05)) {
             driver.selectProperty(new Location(0,5), btn05, imageView05);
-        } else if (source.equals(btn06) && mapOfbtns[6][0] == 0) {
+        } else if (source.equals(btn06)) {
             driver.selectProperty(new Location(0,6), btn06, imageView06);
-        } else if (source.equals(btn07) && mapOfbtns[7][0] == 0) {
+        } else if (source.equals(btn07)) {
             driver.selectProperty(new Location(0,7), btn07, imageView07);
-        } else if (source.equals(btn08) && mapOfbtns[8][0] == 0) {
+        } else if (source.equals(btn08)) {
             driver.selectProperty(new Location(0,8), btn08, imageView08);
-        } else if (source.equals(btn10) && mapOfbtns[0][1] == 0) {
+        } else if (source.equals(btn10)) {
             driver.selectProperty(new Location(1,0), btn10, imageView10);
-        } else if (source.equals(btn11) && mapOfbtns[1][1] == 0) {
+        } else if (source.equals(btn11)) {
             driver.selectProperty(new Location(1,1), btn11, imageView11);
-        } else if (source.equals(btn12) && mapOfbtns[2][1] == 0) {
+        } else if (source.equals(btn12)) {
             driver.selectProperty(new Location(1,2), btn12, imageView12);
-        } else if (source.equals(btn13) && mapOfbtns[3][1] == 0) {
+        } else if (source.equals(btn13)) {
             driver.selectProperty(new Location(1,3), btn13, imageView13);
-        } else if (source.equals(btn14) && mapOfbtns[4][1] == 0) {
+        } else if (source.equals(btn14)) {
             driver.selectProperty(new Location(1,4), btn14, imageView14);
-        } else if (source.equals(btn15) && mapOfbtns[5][1] == 0) {
+        } else if (source.equals(btn15)) {
             driver.selectProperty(new Location(1,5), btn15, imageView15);
-        } else if (source.equals(btn16) && mapOfbtns[6][1] == 0) {
+        } else if (source.equals(btn16)) {
             driver.selectProperty(new Location(1,6), btn16, imageView16);
-        } else if (source.equals(btn17) && mapOfbtns[7][1] == 0) {
+        } else if (source.equals(btn17)) {
             driver.selectProperty(new Location(1,7), btn17, imageView17);
-        } else if (source.equals(btn18) && mapOfbtns[8][1] == 0) {
+        } else if (source.equals(btn18)) {
             driver.selectProperty(new Location(1,8), btn18, imageView18);
-        } else if (source.equals(btn20) && mapOfbtns[0][2] == 0) {
+        } else if (source.equals(btn20)) {
             driver.selectProperty(new Location(2,0), btn20, imageView20);
-        } else if (source.equals(btn21) && mapOfbtns[1][2] == 0) {
+        } else if (source.equals(btn21)) {
             driver.selectProperty(new Location(2,1), btn21, imageView21);
-        } else if (source.equals(btn22) && mapOfbtns[2][2] == 0) {
+        } else if (source.equals(btn22)) {
             driver.selectProperty(new Location(2,2), btn22, imageView22);
-        } else if (source.equals(btn23) && mapOfbtns[3][2] == 0) {
+        } else if (source.equals(btn23)) {
             driver.selectProperty(new Location(2,3), btn23, imageView23);
-        } else if (source.equals(btn24) && mapOfbtns[4][2] == 0) {
+        } else if (source.equals(btn24)) {
             root = FXMLLoader.load(getClass().getResource("insideTown.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else if (source.equals(btn25) && mapOfbtns[5][2] == 0) {
+        } else if (source.equals(btn25)) {
             driver.selectProperty(new Location(2,5), btn25, imageView25);
-        } else if (source.equals(btn26) && mapOfbtns[6][2] == 0) {
+        } else if (source.equals(btn26)) {
             driver.selectProperty(new Location(2,6), btn26, imageView26);
-        } else if (source.equals(btn27) && mapOfbtns[7][2] == 0) {
+        } else if (source.equals(btn27)) {
             driver.selectProperty(new Location(2,7), btn27, imageView27);
-        } else if (source.equals(btn28) && mapOfbtns[8][2] == 0) {
+        } else if (source.equals(btn28)) {
             driver.selectProperty(new Location(2,8), btn28, imageView28);
-        } else if (source.equals(btn30) && mapOfbtns[0][3] == 0) {
+        } else if (source.equals(btn30)) {
             driver.selectProperty(new Location(3,0), btn30, imageView30);
-        } else if (source.equals(btn31) && mapOfbtns[1][3] == 0) {
+        } else if (source.equals(btn31)) {
             driver.selectProperty(new Location(3,1), btn31, imageView31);
-        } else if (source.equals(btn32) && mapOfbtns[2][3] == 0) {
+        } else if (source.equals(btn32)) {
             driver.selectProperty(new Location(3,2), btn32, imageView32);
-        } else if (source.equals(btn33) && mapOfbtns[3][3] == 0) {
+        } else if (source.equals(btn33)) {
             driver.selectProperty(new Location(3,3), btn33, imageView33);
-        } else if (source.equals(btn34) && mapOfbtns[4][3] == 0) {
+        } else if (source.equals(btn34)) {
             driver.selectProperty(new Location(3,4), btn34, imageView34);
-        } else if (source.equals(btn35) && mapOfbtns[5][3] == 0) {
+        } else if (source.equals(btn35)) {
             driver.selectProperty(new Location(3,5), btn35, imageView35);
-        } else if (source.equals(btn36) && mapOfbtns[6][3] == 0) {
+        } else if (source.equals(btn36)) {
             driver.selectProperty(new Location(3,6), btn36, imageView36);
-        } else if (source.equals(btn37) && mapOfbtns[7][3] == 0) {
+        } else if (source.equals(btn37)) {
             driver.selectProperty(new Location(3,7), btn37, imageView37);
-        } else if (source.equals(btn38) && mapOfbtns[8][3] == 0) {
+        } else if (source.equals(btn38)) {
             driver.selectProperty(new Location(3,8), btn38, imageView38);
-        } else if (source.equals(btn40) && mapOfbtns[0][4] == 0) {
+        } else if (source.equals(btn40)) {
             driver.selectProperty(new Location(4,0), btn40, imageView40);
-        } else if (source.equals(btn41) && mapOfbtns[1][4] == 0) {
+        } else if (source.equals(btn41)) {
             driver.selectProperty(new Location(4,1), btn41, imageView41);
-        } else if (source.equals(btn42) && mapOfbtns[2][4] == 0) {
+        } else if (source.equals(btn42)) {
             driver.selectProperty(new Location(2,4), btn24, imageView42);
-        } else if (source.equals(btn43) && mapOfbtns[3][4] == 0) {
+        } else if (source.equals(btn43)) {
             driver.selectProperty(new Location(4,3), btn43, imageView43);
-        } else if (source.equals(btn44) && mapOfbtns[4][4] == 0) {
+        } else if (source.equals(btn44)) {
             driver.selectProperty(new Location(4,4), btn44, imageView44);
-        } else if (source.equals(btn45) && mapOfbtns[5][4] == 0) {
+        } else if (source.equals(btn45)) {
             driver.selectProperty(new Location(4,5), btn45, imageView45);
-        } else if (source.equals(btn46) && mapOfbtns[6][4] == 0) {
+        } else if (source.equals(btn46)) {
             driver.selectProperty(new Location(4,6), btn46, imageView46);
-        } else if (source.equals(btn47) && mapOfbtns[7][4] == 0) {
+        } else if (source.equals(btn47)) {
             driver.selectProperty(new Location(4,7), btn47, imageView47);
-        } else if (source.equals(btn48) && mapOfbtns[8][4] == 0) {
+        } else if (source.equals(btn48)) {
             driver.selectProperty(new Location(4,8), btn48, imageView48);
         }
     }

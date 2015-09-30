@@ -1,6 +1,7 @@
 package game;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 /**
  * Created by yamininambiar on 9/21/15.
@@ -19,11 +20,12 @@ public class Player {
     private double smithore;
     private int mule;
     private int playerNumber;
+    private int money;
 
     //default ctor
     //default ctor's playerNumber is 0. Not sure why we even need a default character
     public Player() {
-        new Player(new Location(), new ArrayList<>(),"Colonel Robert Waters", "Human", "Human", 0);
+        new Player(new Location(0,0), new ArrayList<>(),"Colonel Robert Waters", "Human", "Human", 0);
     }
 
     //all variables assigned ctor
@@ -42,6 +44,14 @@ public class Player {
         crystite = 0;
         smithore = 0;
         mule = 0;
+        money = 1000;
+        if (race == "Flapper") {
+            money = 1600;
+        } else if (race == "Human") {
+            money = 600;
+        }
+
+
     }
 
     //this should be the only the ctor we really need
@@ -51,13 +61,29 @@ public class Player {
         this.race = race;
         this.playerNumber = playerNumber;
         properties = new ArrayList<>();
-        loc = new Location();
+        loc = new Location(0,0);
         food = 0;
         energy = 0;
         crystite = 0;
         smithore = 0;
         mule = 0;
+        if (race == "Flapper") {
+            money = 1600;
+        } else if (race == "Human") {
+            money = 600;
+        }
     }
+
+    /* PlayerComparator class definition*/
+    public static class PlayerComparator<Object> implements Comparator<Player> {
+        @Override
+        //sorts based on money, from greatest to least
+        public int compare(Player a, Player b) {
+            return b.getMoney() - a.getMoney();
+        }
+    }
+
+
 
     public String getName() {
         return name;
@@ -116,5 +142,9 @@ public class Player {
     public void addProperty(Location loc) {
         properties.add(loc);
     }
+
+    public int getMoney() { return money; }
+
+    public void addMoney(int m) { money += m; }
 
 }

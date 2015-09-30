@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 
 /**
@@ -17,44 +18,103 @@ import java.util.ArrayList;
  */
 public class Driver {
 
+    //data
     private boolean landSelection = true;
-    private int roundNumber;
+    private static int roundNumber;
     private ArrayList<Player> players;
     private Stage stage;
     private Parent root;
     private ArrayList<String> plainURLS = new ArrayList<String>() {{
-        add("file:graphics/TilePlainP1.png");
-        add("file:graphics/TilePlainP2.png");
-        add("file:graphics/TilePlainP3.png");
-        add("file:graphics/TilePlainP4.png");
+        add("file:/src/game/graphics/TilePlainP1.png");
+        add("file:/src/game/graphics/TilePlainP2.png");
+        add("file:/src/game/graphics/TilePlainP3.png");
+        add("file:/src/game/graphics/TilePlainP4.png");
     }};
     private ArrayList<String> riverURLS = new ArrayList<String>() {{
-        add("file:graphics/TileRiverP1.png");
-        add("file:graphics/TileRiverP2.png");
-        add("file:graphics/TileRiverP3.png");
-        add("file:graphics/TileRiverP4.png");
+        add("file:/src/game/graphics/TileRiverP1.png");
+        add("file:/src/game/graphics/TileRiverP2.png");
+        add("file:/src/game/graphics/TileRiverP3.png");
+        add("file:/src/game/graphics/TileRiverP4.png");
     }};
     private ArrayList<String> m1URLS = new ArrayList<String>() {{
-        add("file:graphics/TileMountain1P1.png");
-        add("file:graphics/TileMountain1P2.png");
-        add("file:graphics/TileMountain1P3.png");
-        add("file:graphics/TileMountain1P4.png");
+        add("file:/src/game/graphics/TileMountain1P1.png");
+        add("file:/src/game/graphics/TileMountain1P2.png");
+        add("file:/src/game/graphics/TileMountain1P3.png");
+        add("file:/src/game/graphics/TileMountain1P4.png");
     }};
     private ArrayList<String> m2URLS = new ArrayList<String>() {{
-        add("file:graphics/TileMountain2P1.png");
-        add("file:graphics/TileMountain2P2.png");
-        add("file:graphics/TileMountain2P3.png");
-        add("file:graphics/TileMountain2P4.png");
+        add("file:/src/game/graphics/TileMountain2P1.png");
+        add("file:/src/game/graphics/TileMountain2P2.png");
+        add("file:/src/game/graphics/TileMountain2P3.png");
+        add("file:/src/game/graphics/TileMountain2P4.png");
     }};
     private ArrayList<String> m3URLS = new ArrayList<String>() {{
-        add("file:graphics/TileMountain3P1.png");
-        add("file:graphics/TileMountain3P2.png");
-        add("file:graphics/TileMountain3P3.png");
-        add("file:graphics/TileMountain3P4.png");
+        add("file:/src/game/graphics/TileMountain3P1.png");
+        add("file:/src/game/graphics/TileMountain3P2.png");
+        add("file:/src/game/graphics/TileMountain3P3.png");
+        add("file:/src/game/graphics/TileMountain3P4.png");
     }};
 
+    private ArrayList<Location> plainLocations = new ArrayList<Location>() {{
+        add(new Location(0,0));
+        add(new Location(0,1));
+        add(new Location(0,3));
+        add(new Location(0,5));
+        add(new Location(0,7));
+        add(new Location(0,8));
+        add(new Location(1,0));
+        add(new Location(1,2));
+        add(new Location(1,3));
+        add(new Location(1,5));
+        add(new Location(1,6));
+        add(new Location(1,7));
+        add(new Location(2,1));
+        add(new Location(2,2));
+        add(new Location(2,3));
+        add(new Location(2,5));
+        add(new Location(2,6));
+        add(new Location(2,7));
+        add(new Location(3,0));
+        add(new Location(3,2));
+        add(new Location(3,3));
+        add(new Location(3,5));
+        add(new Location(3,7));
+        add(new Location(3,8));
+        add(new Location(4,0));
+        add(new Location(4,1));
+        add(new Location(4,3));
+        add(new Location(4,5));
+        add(new Location(4,6));
+        add(new Location(4,7));
+    }};
 
+    private ArrayList<Location> riverLocations = new ArrayList<Location>() {{
+        add(new Location(0,4));
+        add(new Location(1,4));
+        add(new Location(3,4));
+        add(new Location(4,4));
+    }};
 
+    private ArrayList<Location> m1Locations = new ArrayList<Location>() {{
+        add(new Location(0,2));
+        add(new Location(1,1));
+        add(new Location(2,8));
+    }};
+
+    private ArrayList<Location> m2Locations = new ArrayList<Location>() {{
+        add(new Location(3,1));
+        add(new Location(4,2));
+        add(new Location(3,6));
+        add(new Location(4,8));
+    }};
+
+    private ArrayList<Location> m3Locations = new ArrayList<Location>() {{
+        add(new Location(2,0));
+        add(new Location(0,6));
+        add(new Location(1,8));
+    }};
+
+    //methods
     public void configure(ArrayList<Player> players, Parent root, Stage stage, Button source, boolean hasSelected) throws IOException {
         root = FXMLLoader.load(getClass().getResource("/game/StandardMap.fxml"));
         Scene scene = new Scene(root);
@@ -78,8 +138,9 @@ public class Driver {
     public void selectProperty(Location loc, Button source, ImageView imgv) throws IOException {
         if (landSelection) {
             int playerNumber = (roundNumber - 1) % players.size();
-            players.get(playerNumber).addProperty(loc);
-            changeTile(imgv);
+            players.get(playerNumber).addProperty(loc); //add property to player's property
+            players.get(playerNumber).addMoney(-loc.getBuyingPrice()); //subtract money from player
+            changeTile(loc, imgv);
             if (roundNumber == players.size() * 2) {
                 //get out of selection phase
                 landSelection = false;
@@ -108,23 +169,50 @@ public class Driver {
         startTurn();
     }
 
-    public void changeTile(ImageView imgv) throws IOException {
+    public void changeTile(Location loc, ImageView imgv) throws IOException {
         int curPlayer = (roundNumber) % players.size();
-        System.out.println(selectorImagesURLS.get(curPlayer));
-        if (imgv.getImage() == "file: graphics/TilePlain.png") {
+        System.out.println(imgv.getId());
+        System.out.println("x" + loc.x + "y" + loc.y);
+        if (containsLocation(plainLocations, loc)) {
+            System.out.println("changing plain");
+            System.out.println(plainURLS.get(curPlayer));
             imgv.setImage(new Image(plainURLS.get(curPlayer)));
-        } else if (imgv.getImage() == "file: graphics/TileRiver.png") {
+        } else if (containsLocation(riverLocations, loc)) {
+            System.out.println("changing river");
             imgv.setImage(new Image(riverURLS.get(curPlayer)));
-        } else if (imgv.getImage() == "file: graphics/TileMountain1.png") {
+        } else if (containsLocation(m1Locations, loc)) {
+            System.out.println("changing m1");
             imgv.setImage(new Image(m1URLS.get(curPlayer)));
-        } else if (imgv.getImage() == "file: graphics/TileMountain2.png") {
+        } else if (containsLocation(m2Locations, loc)) {
+            System.out.println("changing m2");
             imgv.setImage(new Image(m2URLS.get(curPlayer)));
-        } else if (imgv.getImage() == "file: graphics/TileMountain3.png") {
+        } else if (containsLocation(m3Locations, loc)) {
+            System.out.println("changing m3");
             imgv.setImage(new Image(m3URLS.get(curPlayer)));
         }
     }
 
+    public boolean containsLocation(ArrayList<Location> locations, Location loc) {
+        double x = loc.x;
+        double y = loc.y;
+        boolean containsLocation = false;
+        for (int i = 0; i < locations.size(); i++) {
+            if (locations.get(i).x == x && locations.get(i).y == y) {
+                containsLocation = true;
+            }
+        }
+        return containsLocation;
+    }
 
+    public static int getRoundNumber() {
+        return roundNumber;
+    }
+
+    //sorts based on money, from greatest to least
+    public ArrayList<Player> getTurnOrder() {
+        players.sort(new Player.PlayerComparator<Player>());
+        return players;
+    }
 
     public void startTurn() {
 
