@@ -16,10 +16,13 @@ import javafx.stage.Popup;
 import javafx.stage.Stage;
 import configScreens.Config2Controller;
 
+import javax.swing.*;
 
+import java.util.TimerTask;
 import javafx.scene.image.*;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Timer;
 
 /**
  * Created by tuckerlocicero on 9/23/15.
@@ -240,6 +243,26 @@ public class StandardMapController extends ControllerSuper{
     @FXML
     private void fileCloseAction(ActionEvent event) throws IOException {
         Platform.exit();
+    }
+
+    @FXML
+    private int i = 0;
+    @FXML
+    private JTextField timeToSet;
+    @FXML
+    private void timerSet(ActionEvent event) throws IOException {
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        timeToSet.setText(Integer.toString(i++));
+                    }
+                });
+            }
+        }, 0, 2000);
     }
 
     public void initialize() throws IOException {
