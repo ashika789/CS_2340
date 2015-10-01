@@ -11,6 +11,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.scene.Group;
 
 
 import javafx.scene.image.*;
@@ -269,6 +272,7 @@ public class StandardMapController extends ControllerSuper{
             }
         }, 1000, 1000);
     }
+
 
     public void initialize() throws IOException {
 
