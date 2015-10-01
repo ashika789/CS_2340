@@ -11,9 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import javax.swing.*;
 
-import java.util.TimerTask;
 import javafx.scene.image.*;
 import java.io.IOException;
 
@@ -237,7 +235,6 @@ public class StandardMapController extends ControllerSuper{
     private void fileCloseAction(ActionEvent event) throws IOException {
         Platform.exit();
     }
-
 
     public void initialize() throws IOException {
 
