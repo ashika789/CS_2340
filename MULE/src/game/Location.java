@@ -56,7 +56,7 @@ public class Location {
         this.x = x;
         this.y = y;
         Random r = new Random();
-        buyingPrice = 300 + Driver.getRoundNumber() * r.nextInt(100); //300 + round * random(0-100)
+//        buyingPrice = 300 + driver.getRoundNumber() * r.nextInt(100); //300 + round * random(0-100)
         sellingPrice = 400 + r.nextInt(200); // 400 + random(0-200)
         available = true;
     }

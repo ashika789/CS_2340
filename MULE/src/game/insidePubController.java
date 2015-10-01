@@ -32,7 +32,8 @@ public class insidePubController extends configScreens.ControllerSuper{
         Button source = (Button) event.getSource();
         stage = (Stage) source.getScene().getWindow();
         if (source == yesGambleBtn) {
-            int time = driver.getTimeLeft();
+            //int time = driver.getTimeLeft();
+            int time = 100;
             if (time >= 37) {
                 time = 200;
             } else if (37 > time && time >= 25) {
@@ -59,7 +60,7 @@ public class insidePubController extends configScreens.ControllerSuper{
             stage.setScene(scene);
             stage.show();
         } else if (source == doneGamblingBtn) {
-            Driver.endTurn();
+            driver.endTurn();
         }
     }
 }
