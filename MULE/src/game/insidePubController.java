@@ -35,9 +35,9 @@ public class insidePubController extends configScreens.ControllerSuper{
             int time = driver.getTimeLeft();
             if (time >= 37) {
                 time = 200;
-            } else if (37 > time >= 25) {
+            } else if (37 > time && time >= 25) {
                 time = 150;
-            } else if (25 > time >= 12) {
+            } else if (25 > time && time >= 12) {
                 time = 100;
             } else {
                 time = 50;
