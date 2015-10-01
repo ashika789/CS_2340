@@ -267,7 +267,7 @@ public class StandardMapController extends ControllerSuper{
                     }
                 });
             }
-        }, 1000, 5000);
+        }, 1000, 1000);
     }
 
     public void initialize() throws IOException {
