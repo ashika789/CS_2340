@@ -9,11 +9,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 
 import javafx.scene.image.*;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by tuckerlocicero on 9/23/15.
@@ -236,6 +239,24 @@ public class StandardMapController extends ControllerSuper{
         Platform.exit();
     }
 
+
+    @FXML
+    private int countDown = 60;
+    @FXML
+    private Text time;
+    @FXML
+    public void startCountDown() throws InterruptedException {
+        //System.out.println(countDown);
+        Timer t = new Timer();
+        t.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                time.setText(Integer.toString(countDown));
+                countDown--;
+            }
+        }, 1000, 1000);
+
+    }
     public void initialize() throws IOException {
 
     }
