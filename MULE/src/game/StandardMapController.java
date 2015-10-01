@@ -250,14 +250,14 @@ public class StandardMapController extends ControllerSuper{
     @FXML
     Timer timer = new Timer();
     @FXML
-    public void startCountDown(ActionEvent event) {
+    public void startCountDown() {
 
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 Platform.runLater(new Runnable() {
                     public void run() {
-                        time.setText("Time left:" + countDown);
+                        time.setText("Time Left:" + countDown);
                         countDown--;
                         if(countDown <= 0) {
                             timer.cancel();
@@ -270,32 +270,6 @@ public class StandardMapController extends ControllerSuper{
         }, 1000, 5000);
     }
 
-//    @FXML
-//    public void startCountDown() throws InterruptedException {
-//        time.setText(Integer.toString(countDown));
-//        Timer t = new Timer();
-//        new Timer().schedule(
-//                new TimerTask() {
-//
-//                    @Override
-//                    public void run() {
-//                        countDown--;
-//                        if(countDown == 0) {
-//                            countDown = 60;
-//                        }
-//                    }
-//                }, 1000, 1000);
-
-        //public TimerTask() {
-        //    @Override
-        //    public void run() {
-        //        time.setText("this works!");
-        //        countDown--;
-        //    }
-        //}
-        //t.schedule(TimerTask(), 1000, 1000);
-
-    //}
     public void initialize() throws IOException {
 
     }

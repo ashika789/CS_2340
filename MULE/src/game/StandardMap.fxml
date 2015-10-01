@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="vbox" maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.Timer">
+<VBox fx:id="vbox" maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.StandardMapController">
    <children>
       <MenuBar maxHeight="25.0" maxWidth="576.0" minHeight="25.0" minWidth="576.0" prefHeight="25.0" prefWidth="576.0">
         <menus>
@@ -325,7 +325,7 @@
             <Button fx:id="btn41" layoutX="10.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Button fx:id="btn20" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="2" />
             <Button fx:id="btn14" layoutX="266.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Text fx:id="time" onMouseMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" GridPane.rowIndex="4" />
+            <Text fx:id="time" onMouseMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <TextArea prefHeight="200.0" prefWidth="200.0" />
