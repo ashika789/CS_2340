@@ -235,8 +235,24 @@ public class Driver {
         }
     }
 
-    public void purchaseProperty(Location loc) {
-        //TODO 
+    public boolean purchaseProperty(Location loc) {
+
+        /*
+        if (loc has not been purchased) {
+            if (isLandSelectionPhase()) {
+                purchase property
+                return true
+            if (player can afford it) {
+                purchase the property
+                change player money
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+         */
+        return false;
     }
 
     //getters
