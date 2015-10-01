@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 
 
 import javafx.scene.image.*;
+
+import java.awt.*;
 import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -244,19 +246,53 @@ public class StandardMapController extends ControllerSuper{
     private int countDown = 60;
     @FXML
     private Text time;
+
     @FXML
-    public void startCountDown() throws InterruptedException {
-        //System.out.println(countDown);
-        Timer t = new Timer();
-        t.schedule(new TimerTask() {
+    public void startCountDown() {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                time.setText(Integer.toString(countDown));
-                countDown--;
+                Platform.runLater(new Runnable() {
+                    public void run() {
+                        time.setText("Time left:" + countDown);
+                        countDown--;
+                        if(countDown == 0) {
+                            
+                        }
+
+                    }
+                });
             }
         }, 1000, 1000);
-
     }
+
+//    @FXML
+//    public void startCountDown() throws InterruptedException {
+//        time.setText(Integer.toString(countDown));
+//        Timer t = new Timer();
+//        new Timer().schedule(
+//                new TimerTask() {
+//
+//                    @Override
+//                    public void run() {
+//                        countDown--;
+//                        if(countDown == 0) {
+//                            countDown = 60;
+//                        }
+//                    }
+//                }, 1000, 1000);
+
+        //public TimerTask() {
+        //    @Override
+        //    public void run() {
+        //        time.setText("this works!");
+        //        countDown--;
+        //    }
+        //}
+        //t.schedule(TimerTask(), 1000, 1000);
+
+    //}
     public void initialize() throws IOException {
 
     }
