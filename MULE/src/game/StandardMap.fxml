@@ -7,7 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox fx:id="vbox" maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.StandardMapController">
+<VBox fx:id="vbox" maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.Timer">
    <children>
       <MenuBar maxHeight="25.0" maxWidth="576.0" minHeight="25.0" minWidth="576.0" prefHeight="25.0" prefWidth="576.0">
         <menus>

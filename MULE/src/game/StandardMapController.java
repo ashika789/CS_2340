@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import javafx.scene.image.*;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.util.Timer;
@@ -246,10 +247,11 @@ public class StandardMapController extends ControllerSuper{
     private int countDown = 60;
     @FXML
     private Text time;
-
     @FXML
-    public void startCountDown() {
-        Timer timer = new Timer();
+    Timer timer = new Timer();
+    @FXML
+    public void startCountDown(ActionEvent event) {
+
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -257,14 +259,15 @@ public class StandardMapController extends ControllerSuper{
                     public void run() {
                         time.setText("Time left:" + countDown);
                         countDown--;
-                        if(countDown < 0) {
+                        if(countDown <= 0) {
                             timer.cancel();
+                            time.setText("YOUR TURN IS OVER!");
                         }
 
                     }
                 });
             }
-        }, 1000, 1000);
+        }, 1000, 5000);
     }
 
 //    @FXML

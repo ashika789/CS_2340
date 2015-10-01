@@ -1,16 +1,21 @@
 package game;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.*;
 import javafx.scene.image.Image;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 /**
@@ -167,7 +172,10 @@ public class Driver {
         stage.show();
         roundNumber++;
         startTurn();
+
+        //put in here timer for each round
     }
+
 
     public void changeTile(Location loc, ImageView imgv) throws IOException {
         int curPlayer = (roundNumber) % players.size();
