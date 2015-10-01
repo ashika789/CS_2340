@@ -265,7 +265,7 @@ public class StandardMapController extends ControllerSuper{
                         if(countDown <= 0) {
                             timer.cancel();
                             time.setText("YOUR TURN IS OVER!");
-
+                            countDown = 60;
                         }
 
                     }
