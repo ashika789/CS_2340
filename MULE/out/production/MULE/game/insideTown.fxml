@@ -7,7 +7,8 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.insideTownController">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="400.0" fitWidth="612.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -54,7 +55,5 @@
             <Image url="@graphics/assayCrystite.png" />
          </image>
       </ImageView>
-      <Button fx:id="leaveTownBtn" layoutY="374.0" mnemonicParsing="false" onAction="#buttonHandler" text="Leave Town" />
-      <Button fx:id="pubBtn" layoutX="325.0" layoutY="258.0" mnemonicParsing="false" prefHeight="115.0" prefWidth="160.0" visible="false" />
    </children>
 </AnchorPane>
