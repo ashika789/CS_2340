@@ -18,9 +18,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 
-/**
- * Created by yamininambiar on 9/24/15.
- */
 public class Driver {
 
     //data
@@ -200,6 +197,10 @@ public class Driver {
         }
     }
 
+    public Player getPlayer() {
+        return players.get(roundNumber % players.size());
+    }
+
     public boolean containsLocation(ArrayList<Location> locations, Location loc) {
         double x = loc.x;
         double y = loc.y;
@@ -216,7 +217,7 @@ public class Driver {
         return roundNumber;
     }
 
-    //sorts based on money, from greatest to least
+    //sorts based on score, from greatest to least
     public ArrayList<Player> getTurnOrder() {
         players.sort(new Player.PlayerComparator<Player>());
         return players;

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.StandardMapController">
+<VBox fx:id="vbox" maxHeight="345.0" maxWidth="576.0" minHeight="345.0" minWidth="576.0" prefHeight="345.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.StandardMapController">
    <children>
       <MenuBar maxHeight="25.0" maxWidth="576.0" minHeight="25.0" minWidth="576.0" prefHeight="25.0" prefWidth="576.0">
         <menus>
@@ -54,52 +55,52 @@
                <!--</image>-->
             <!--</ImageView>-->
 
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4">
+            <ImageView fx:id="imageView04" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4">
                <image>
                   <Image url="@graphics/TileRiver.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1">
+            <ImageView fx:id="imageView01" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView10" fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView12" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3">
+            <ImageView fx:id="imageView03" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView13" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView22" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView21" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView23" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView30" fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
@@ -109,222 +110,224 @@
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView33" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView40" fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <ImageView fx:id="imageview41" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView43" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView41" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TileRiver.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView24" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TileTown.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView34" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TileRiver.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView44" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="4" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TileRiver.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5">
+            <ImageView fx:id="imageView05" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8">
+            <ImageView fx:id="imageView08" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7">
+            <ImageView fx:id="imageView07" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView15" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView17" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView16" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView25" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView27" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView26" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView35" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView37" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView38" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView45" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView47" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="7" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView46" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2">
+            <ImageView fx:id="imageView02" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2">
                <image>
                   <Image url="@graphics/TileMountain1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView11" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TileMountain1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView20" fitHeight="64.0" fitWidth="64.0" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TileMountain3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView31" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView42" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6">
+            <ImageView fx:id="imageView06" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6">
                <image>
                   <Image url="@graphics/TileMountain3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
+            <ImageView fx:id="imageView18" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="1">
                <image>
                   <Image url="@graphics/TileMountain3.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
+            <ImageView fx:id="imageView28" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="2">
                <image>
                   <Image url="@graphics/TileMountain1.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
+            <ImageView fx:id="imageView36" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="6" GridPane.rowIndex="3">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
+            <ImageView fx:id="imageView48" fitHeight="64.0" fitWidth="64.0" GridPane.columnIndex="8" GridPane.rowIndex="4">
                <image>
                   <Image url="@graphics/TileMountain2.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="64.0" fitWidth="64.0">
+            <ImageView fx:id="imageView00" fitHeight="64.0" fitWidth="64.0">
                <image>
                   <Image url="@graphics/TilePlain.png" />
                </image>
             </ImageView>
-            <Button fx:id="btn24" layoutX="74.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Button fx:id="btn30" layoutX="138.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" />
-            <Button fx:id="btn54" layoutX="266.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <Button fx:id="btn64" layoutX="330.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <Button fx:id="btn32" layoutX="138.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button fx:id="btn71" layoutX="394.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <Button fx:id="btn61" layoutX="330.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <Button fx:id="btn52" layoutX="522.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Button fx:id="tbn60" layoutX="330.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" />
-            <Button fx:id="btn31" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button fx:id="btn42" layoutX="202.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Button fx:id="btn84" layoutX="458.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="4" />
-            <Button fx:id="btn03" layoutX="522.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="3" />
-            <Button fx:id="btn53" layoutX="266.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <Button fx:id="btn43" layoutX="202.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Button fx:id="btn72" layoutX="394.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <Button fx:id="btn01" layoutX="138.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="1" />
-            <Button fx:id="btn23" layoutX="74.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Button fx:id="btn20" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" />
-            <Button fx:id="btn83" layoutX="458.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="3" />
-            <Button fx:id="btn40" layoutX="202.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" />
-            <Button fx:id="btn81" layoutX="458.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-            <Button fx:id="btn04" layoutX="522.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="4" />
-            <Button fx:id="btn73" layoutX="394.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <Button fx:id="btn12" layoutX="10.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="btn34" layoutX="138.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Button fx:id="btn42" layoutX="74.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="btn03" layoutX="138.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" />
+            <Button fx:id="btn45" layoutX="266.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Button fx:id="btn46" layoutX="330.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Button fx:id="btn23" layoutX="138.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="btn17" layoutX="394.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Button fx:id="btn16" layoutX="330.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Button fx:id="btn25" layoutX="522.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Button fx:id="btn06" layoutX="330.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" />
+            <Button fx:id="btn13" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Button fx:id="btn24" layoutX="202.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button fx:id="btn48" layoutX="458.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <Button fx:id="btn30" layoutX="522.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="3" />
+            <Button fx:id="btn35" layoutX="266.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Button fx:id="btn34" layoutX="202.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Button fx:id="btn27" layoutX="394.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Button fx:id="btn10" layoutX="138.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="1" />
+            <Button fx:id="btn32" layoutX="74.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Button fx:id="btn02" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" />
+            <Button fx:id="btn38" layoutX="458.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <Button fx:id="btn04" layoutX="202.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" />
+            <Button fx:id="btn18" layoutX="458.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Button fx:id="btn40" layoutX="522.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="4" />
+            <Button fx:id="btn37" layoutX="394.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Button fx:id="btn21" layoutX="10.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btn43" layoutX="138.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="4" />
             <Button fx:id="btn33" layoutX="138.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button fx:id="btn51" layoutX="266.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Button fx:id="btn21" layoutX="74.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button fx:id="btn15" layoutX="266.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Button fx:id="btn12" layoutX="74.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Button fx:id="btn44" layoutX="202.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="4" />
             <Button fx:id="btn22" layoutX="74.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Button fx:id="btn00" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" />
-            <Button fx:id="btn50" layoutX="266.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" />
-            <Button fx:id="btn74" layoutX="394.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <Button fx:id="btn13" layoutX="10.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="btn70" layoutX="394.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" />
-            <Button fx:id="btn10" layoutX="74.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" />
-            <Button fx:id="btn62" layoutX="330.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <Button fx:id="btn82" layoutX="458.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Button fx:id="btn05" layoutX="266.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="5" />
+            <Button fx:id="btn47" layoutX="394.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Button fx:id="btn31" layoutX="10.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Button fx:id="btn07" layoutX="394.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="7" />
+            <Button fx:id="btn01" layoutX="74.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" />
+            <Button fx:id="btn26" layoutX="330.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Button fx:id="btn28" layoutX="458.0" layoutY="138.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" GridPane.rowIndex="2" />
             <Button fx:id="btn11" layoutX="10.0" layoutY="74.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="btn80" layoutX="458.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" />
-            <Button fx:id="btn63" layoutX="330.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <Button fx:id="btn14" layoutX="10.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Button fx:id="btn02" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="2" />
-            <Button fx:id="btn41" layoutX="266.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button fx:id="btn08" layoutX="458.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="8" />
+            <Button fx:id="btn36" layoutX="330.0" layoutY="202.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Button fx:id="btn41" layoutX="10.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="btn20" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="2" />
+            <Button fx:id="btn14" layoutX="266.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Text fx:id="time" onMouseMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
          </children>
       </GridPane>
+      <TextArea prefHeight="200.0" prefWidth="200.0" />
    </children>
 </VBox>

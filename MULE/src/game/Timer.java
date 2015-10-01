@@ -14,7 +14,7 @@ public class Timer {
 
 
     @FXML
-    private int countDown = 60;
+    private int countDown = 50;
     @FXML
     private Text time;
     @FXML

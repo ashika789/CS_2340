@@ -13,10 +13,12 @@ import java.io.IOException;
 /**
  * Created by tuckerlocicero on 9/24/15.
  */
-public class insideTownController {
+public class insideTownController extends configScreens.ControllerSuper {
 
     @FXML
     private Button leaveTownBtn;
+    @FXML
+    private Button pubBtn;
 
     @FXML
     private void buttonHandler(ActionEvent event) throws IOException {
@@ -29,7 +31,14 @@ public class insideTownController {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+        } else if (source == pubBtn) {
+            root = FXMLLoader.load(getClass().getResource("insidePub.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         }
     }
+
+
 
 }

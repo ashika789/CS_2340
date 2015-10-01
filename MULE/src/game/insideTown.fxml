@@ -55,5 +55,6 @@
          </image>
       </ImageView>
       <Button fx:id="leaveTownBtn" layoutY="374.0" mnemonicParsing="false" onAction="#buttonHandler" text="Leave Town" />
+      <Button fx:id="pubBtn" layoutX="325.0" layoutY="258.0" mnemonicParsing="false" prefHeight="115.0" prefWidth="160.0" visible="false" />
    </children>
 </AnchorPane>
