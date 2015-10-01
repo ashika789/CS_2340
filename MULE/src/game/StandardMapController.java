@@ -237,7 +237,7 @@ public class StandardMapController extends ControllerSuper{
     private void fileCloseAction(ActionEvent event) throws IOException {
         Platform.exit();
     }
-    
+
 
     public void initialize() throws IOException {
 
