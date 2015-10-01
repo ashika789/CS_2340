@@ -85,7 +85,7 @@ public class Player {
         @Override
         //sorts based on money, from greatest to least
         public int compare(Player a, Player b) {
-            return b.getScore() - a.getScore();
+            return a.getScore() - b.getScore();
         }
     }
 
