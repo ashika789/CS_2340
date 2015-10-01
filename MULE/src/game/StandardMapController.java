@@ -258,7 +258,7 @@ public class StandardMapController extends ControllerSuper{
                         time.setText("Time left:" + countDown);
                         countDown--;
                         if(countDown == 0) {
-                            
+
                         }
 
                     }
