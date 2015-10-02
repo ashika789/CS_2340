@@ -253,8 +253,11 @@ public class StandardMapController extends ControllerSuper{
     @FXML
     Timer timer = new Timer();
     @FXML
-    public void startCountDown() {
-
+    public void startCountDown(ActionEvent event) {
+        Stage stage;
+        Parent root = null;
+        Button source = (Button) event.getSource();
+        stage = (Stage) source.getScene().getWindow();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {

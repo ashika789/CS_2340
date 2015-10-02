@@ -8,6 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.io.File;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 
 public class Config1Controller extends ControllerSuper {
 
@@ -21,10 +25,18 @@ public class Config1Controller extends ControllerSuper {
 
     @FXML
     private void config1ButtonAction(ActionEvent event) throws IOException {
+
+
         Stage stage;
         Parent root;
         Button source = (Button) event.getSource();
         stage = (Stage) source.getScene().getWindow();
+
+//        String toPlay = "music.mp3";
+//        Media hit = new Media(toPlay);
+//        MediaPlayer mediaPlayer = new MediaPlayer(hit);
+//        mediaPlayer.play();
+
         if (source == config1NextBtn) {
             boolean toggles[] = {false, false};
             for (Toggle t : difficultyToggle.getToggles()) {
