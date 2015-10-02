@@ -325,7 +325,15 @@
             <Button fx:id="btn41" layoutX="10.0" layoutY="266.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Button fx:id="btn20" layoutX="522.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.rowIndex="2" />
             <Button fx:id="btn14" layoutX="266.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Text fx:id="time" onMouseMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
+            <VBox>
+               <children>
+                  <VBox>
+                     <children>
+                        <Text fx:id="time" onMouseMoved="#startCountDown" onTouchMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
          </children>
       </GridPane>
       <TextArea prefHeight="200.0" prefWidth="200.0" />

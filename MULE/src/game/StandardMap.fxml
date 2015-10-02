@@ -329,7 +329,7 @@
                <children>
                   <VBox>
                      <children>
-                        <Text fx:id="time" onMouseMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
+                        <Text fx:id="time" onMouseMoved="#startCountDown" onTouchMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
                      </children>
                   </VBox>
                </children>
