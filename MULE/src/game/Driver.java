@@ -205,6 +205,7 @@ public class Driver {
         if (!isLandSelectionPhase()) {
             calculatePlayerOrder();
         }
+        initializeTimer();
         startTurn();
     }
 
