@@ -327,7 +327,11 @@
             <Button fx:id="btn14" layoutX="266.0" layoutY="10.0" mnemonicParsing="false" onAction="#buttonHandler" opacity="0.0" prefHeight="64.0" prefWidth="64.0" text="Button" GridPane.columnIndex="4" GridPane.rowIndex="1" />
             <VBox>
                <children>
-                  <Text fx:id="time" onMouseMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
+                  <VBox>
+                     <children>
+                        <Text fx:id="time" onMouseMoved="#startCountDown" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Left: " GridPane.rowIndex="4" />
+                     </children>
+                  </VBox>
                </children>
             </VBox>
          </children>
