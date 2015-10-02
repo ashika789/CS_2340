@@ -42,23 +42,28 @@ public class Config2Controller extends ControllerSuper {
     ObservableList<String> raceBox = FXCollections.observableArrayList("Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite");
 
     @FXML
-    private void config2ButtonAction(ActionEvent event) throws IOException {
-        System.out.println("c2 driver: " + driver);
-        Stage stage;
-        Parent root = null;
-        Button source = (Button) event.getSource();
-        stage = (Stage) source.getScene().getWindow();
-        if (source == config2StartBtn) {
-            if (verifyComboBoxes()) {
-                driver.configure(players, root, stage, source, hasSelected);
+    private void config2ButtonAction(ActionEvent event) {
+        try {
+            System.out.println("c2 driver: " + driver);
+
+            Stage stage;
+            Parent root = null;
+            Button source = (Button) event.getSource();
+            stage = (Stage) source.getScene().getWindow();
+            if (source == config2StartBtn) {
+                if (verifyComboBoxes()) {
+                    driver.configure(players, root, stage, source, hasSelected);
+                } else {
+                    errorLabel.setVisible(true);
+                }
             } else {
-                errorLabel.setVisible(true);
+                root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
             }
-        } else {
-            root = FXMLLoader.load(getClass().getResource("configScreen1.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        } catch (IOException e) {
+            System.out.println("> IOException in Config2Controller's config2ButtonAction()");
         }
 
     }

@@ -22,20 +22,23 @@ public class insideTownController extends configScreens.ControllerSuper {
 
     @FXML
     private void buttonHandler(ActionEvent event) throws IOException {
-        Stage stage;
-        Parent root = null;
-        Button source = (Button) event.getSource();
-        stage = (Stage) source.getScene().getWindow();
-        if (source == leaveTownBtn) {
-            root = FXMLLoader.load(getClass().getResource("StandardMap.fxml"));
+        try {
+            Stage stage;
+            Parent root;
+            Button source = (Button) event.getSource();
+            stage = (Stage) source.getScene().getWindow();
+            if (source == leaveTownBtn) {
+                root = FXMLLoader.load(getClass().getResource("StandardMap.fxml"));
+            } else if (source == pubBtn){
+                root = FXMLLoader.load(getClass().getResource("insidePub.fxml"));
+            } else {
+                root = null;
+            }
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else if (source == pubBtn) {
-            root = FXMLLoader.load(getClass().getResource("insidePub.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        } catch (IOException e) {
+            System.out.println("> IOException in insideTownController's buttonHandler()");
         }
     }
 

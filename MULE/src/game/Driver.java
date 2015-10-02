@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import javax.xml.bind.SchemaOutputResolver;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -119,50 +120,60 @@ public class Driver {
         add(new Location(1,8));
     }};
 
-    public void selectProperty(Location loc, Button source, ImageView imgv) throws IOException {
-        if (isLandSelectionPhase()) {
-            int playerNumber = (roundNumber + 1) % players.size();
-            players.get(playerNumber).addProperty(loc); //add property to player's property
-            players.get(playerNumber).addMoney(-loc.getBuyingPrice()); //subtract money from player
-            changeTile(loc, imgv);
-            if (roundNumber == players.size() * 2) {
-                //get out of selection phase
-                roundNumber = 1;
-                startRound();
-            } else {
-                stage = new Stage();
-                root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-                stage.setScene(new Scene(root));
-                stage.setTitle("Purchase Property for " + players.get(playerNumber).getName());
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.initOwner(source.getScene().getWindow());
-                stage.showAndWait();
-                roundNumber++;
+    public void selectProperty(Location loc, Button source, ImageView imgv) {
+        try {
+            if (isLandSelectionPhase()) {
+                int playerNumber = (roundNumber + 1) % players.size();
+                players.get(playerNumber).addProperty(loc); //add property to player's property
+                players.get(playerNumber).addMoney(-loc.getBuyingPrice()); //subtract money from player
+                changeTile(loc, imgv);
+                if (roundNumber == players.size() * 2) {
+                    //get out of selection phase
+                    roundNumber = 1;
+                    startRound();
+                } else {
+                    stage = new Stage();
+                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                    stage.setScene(new Scene(root));
+                    stage.setTitle("Purchase Property for " + players.get(playerNumber).getName());
+                    stage.initModality(Modality.APPLICATION_MODAL);
+                    stage.initOwner(source.getScene().getWindow());
+                    stage.showAndWait();
+                    roundNumber++;
+                }
             }
+
+        } catch (IOException e) {
+            System.out.println("IOException in Driver's selectionProperty()");
         }
+
     }
 
-    public void changeTile(Location loc, ImageView imgv) throws IOException {
-        int curPlayer = (roundNumber + 1) % players.size();
-        System.out.println(imgv.getId());
-        System.out.println("x" + loc.x + "y" + loc.y);
-        if (containsLocation(plainLocations, loc)) {
-            System.out.println("changing plain");
-            System.out.println("changeTile(): curPlayer = " + curPlayer);
-            System.out.println(plainURLS.get(curPlayer));
-            imgv.setImage(new Image(plainURLS.get(curPlayer)));
-        } else if (containsLocation(riverLocations, loc)) {
-            System.out.println("changing river");
-            imgv.setImage(new Image(riverURLS.get(curPlayer)));
-        } else if (containsLocation(m1Locations, loc)) {
-            System.out.println("changing m1");
-            imgv.setImage(new Image(m1URLS.get(curPlayer)));
-        } else if (containsLocation(m2Locations, loc)) {
-            System.out.println("changing m2");
-            imgv.setImage(new Image(m2URLS.get(curPlayer)));
-        } else if (containsLocation(m3Locations, loc)) {
-            System.out.println("changing m3");
-            imgv.setImage(new Image(m3URLS.get(curPlayer)));
+    public void changeTile(Location loc, ImageView imgv) {
+        try {
+            int curPlayer = (roundNumber + 1) % players.size();
+
+            System.out.println(imgv.getId());
+            System.out.println("x" + loc.x + "y" + loc.y);
+            if (containsLocation(plainLocations, loc)) {
+                System.out.println("changing plain");
+                System.out.println(plainURLS.get(curPlayer));
+                imgv.setImage(new Image(plainURLS.get(curPlayer)));
+            } else if (containsLocation(riverLocations, loc)) {
+                System.out.println("changing river");
+                imgv.setImage(new Image(riverURLS.get(curPlayer)));
+            } else if (containsLocation(m1Locations, loc)) {
+                System.out.println("changing m1");
+                imgv.setImage(new Image(m1URLS.get(curPlayer)));
+            } else if (containsLocation(m2Locations, loc)) {
+                System.out.println("changing m2");
+                imgv.setImage(new Image(m2URLS.get(curPlayer)));
+            } else if (containsLocation(m3Locations, loc)) {
+                System.out.println("changing m3");
+                imgv.setImage(new Image(m3URLS.get(curPlayer)));
+            }
+        } catch (NullPointerException e) {
+            System.out.println("> NullPointerException in Driver's changeTile()");
         }
     }
 
@@ -193,17 +204,21 @@ public class Driver {
         startTurn();
     }
 
-    public void startRound() throws IOException {
-        root = FXMLLoader.load(getClass().getResource("/game/startRound1Screen.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("Round " + roundNumber);
-        stage.setScene(scene);
-        stage.showAndWait();
-        if (!isLandSelectionPhase()) {
-            calculatePlayerOrder();
+    public void startRound() {
+        try {
+            root = FXMLLoader.load(getClass().getResource("/game/startRound1Screen.fxml"));
+            Scene scene = new Scene(root);
+            stage.setTitle("Round " + roundNumber);
+            stage.setScene(scene);
+            stage.showAndWait();
+            if (!isLandSelectionPhase()) {
+                calculatePlayerOrder();
+            }
+            initializeTimer();
+            startTurn();
+        } catch (IOException e) {
+            System.out.println("IOException in Driver's startRound()");
         }
-        initializeTimer();
-        startTurn();
     }
 
     public void initializeTimer() {
@@ -217,7 +232,6 @@ public class Driver {
     private int countDown = 60;
     @FXML
     private Text timeText = new Text();
-
 
     public class RoundTimerTask extends TimerTask {
         public void run() {
