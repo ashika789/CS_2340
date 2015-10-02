@@ -266,6 +266,11 @@ public class StandardMapController extends ControllerSuper{
                             timer.cancel();
                             time.setText("YOUR TURN IS OVER!");
                             countDown = 60;
+                            try {
+                                driver.endTurn();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
 
                     }

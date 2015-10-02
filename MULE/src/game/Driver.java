@@ -29,6 +29,8 @@ public class Driver {
     private Stage stage;
     private Parent root;
     private int timeleft;
+    @FXML
+    private Text time;
 
 
     private ArrayList<String> plainURLS = new ArrayList<String>() {{
@@ -212,16 +214,28 @@ public class Driver {
 
     }
 
+private int countDown = 60;
+
     public class RoundTimerTask extends TimerTask {
         public void run() {
-            if (timeleft != 0) {
-                timeleft--;
+//            if (timeleft != 0) {
+//                timeleft--;
+//            }
+            time.setText("Time Left:" + countDown);
+            countDown--;
+            if (countDown <= 0) {
+                timer.cancel();
+                time.setText("YOUR TURN IS OVER!");
+                countDown = 60;
+                try {
+                    endTurn();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
-
         }
-
-
     }
+
 
 
     public void startTurn() throws IOException {
