@@ -249,38 +249,68 @@ public class StandardMapController extends ControllerSuper{
     @FXML
     private int countDown = 60;
     @FXML
-    private Text time;
+    private Text time = new Text();
+
+
+
     @FXML
-    Timer timer = new Timer();
-    @FXML
-    public void startCountDown(ActionEvent event) {
-        Stage stage;
-        Parent root = null;
-        Button source = (Button) event.getSource();
-        stage = (Stage) source.getScene().getWindow();
-        timer.schedule(new TimerTask() {
+    public void startCountDown() {
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
                 Platform.runLater(new Runnable() {
                     public void run() {
-                        time.setText("Time Left:" + countDown);
-                        countDown--;
-                        if(countDown <= 0) {
-                            timer.cancel();
-                            time.setText("YOUR TURN IS OVER!");
-                            countDown = 60;
-                            try {
-                                driver.endTurn();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+                        if (countDown != 0) {
+                            time.setText("Time left:" + countDown);
+                            countDown--;
+                        } else {
+                            time.setText("Your turn is up.");
                         }
-
                     }
                 });
             }
-        }, 1000, 1000);
+        }, 0, 1000);
     }
+
+
+
+//
+//    @FXML
+//    private int countDown = 60;
+//    @FXML
+//    private Text time;
+//    @FXML
+//    Timer timer = new Timer();
+//    @FXML
+//    public void startCountDown(ActionEvent event) {
+//        Stage stage;
+//        Parent root = null;
+//        Button source = (Button) event.getSource();
+//        stage = (Stage) source.getScene().getWindow();
+//        timer.schedule(new TimerTask() {
+//            @Override
+//            public void run() {
+//                Platform.runLater(new Runnable() {
+//                    public void run() {
+//                        time.setText("Time Left:" + countDown);
+//                        countDown--;
+//                        if(countDown <= 0) {
+//                            timer.cancel();
+//                            time.setText("YOUR TURN IS OVER!");
+//                            countDown = 60;
+//                            try {
+//                                driver.endTurn();
+//                            } catch (IOException e) {
+//                                e.printStackTrace();
+//                            }
+//                        }
+//
+//                    }
+//                });
+//            }
+//        }, 1000, 1000);
+//    }
 
 
     public void initialize() throws IOException {

@@ -123,26 +123,31 @@ public class Driver {
     public void selectProperty(Location loc, Button source, ImageView imgv) {
         try {
             if (isLandSelectionPhase()) {
-                int playerNumber = (roundNumber + 1) % players.size();
-                players.get(playerNumber).addProperty(loc); //add property to player's property
-                players.get(playerNumber).addMoney(-loc.getBuyingPrice()); //subtract money from player
-                changeTile(loc, imgv);
-                if (roundNumber == players.size() * 2) {
-                    //get out of selection phase
-                    roundNumber = 1;
-                    startRound();
-                } else {
-                    stage = new Stage();
-                    root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Purchase Property for " + players.get(playerNumber).getName());
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.initOwner(source.getScene().getWindow());
-                    stage.showAndWait();
-                    roundNumber++;
+                if (turnNumber < players.size()) {
+                    int playerNumber = (roundNumber) % players.size();
+                    System.out.println("playerNumber = " + playerNumber);
+                    if (playerNumber < 0) {
+                        playerNumber = 0;
+                    }
+                    players.get(playerNumber).addProperty(loc); //add property to player's property
+                    players.get(playerNumber).addMoney(-loc.getBuyingPrice()); //subtract money from player
+                    changeTile(loc, imgv);
+                    if (roundNumber == players.size() * 2) {
+                        //get out of selection phase
+                        roundNumber = 1;
+                        startRound();
+                    } else {
+                        stage = new Stage();
+                        root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                        stage.setScene(new Scene(root));
+                        stage.setTitle("Purchase Property for " + players.get(playerNumber).getName());
+                        stage.initModality(Modality.APPLICATION_MODAL);
+                        stage.initOwner(source.getScene().getWindow());
+                        stage.showAndWait();
+                        roundNumber++;
+                    }
                 }
             }
-
         } catch (IOException e) {
             System.out.println("IOException in Driver's selectionProperty()");
         }
@@ -233,6 +238,12 @@ public class Driver {
     @FXML
     private Text timeText = new Text();
 
+    //returns time left
+    public int getCountDown() {
+        return countDown;
+    }
+
+    //inner TimerTask class with public void run()
     public class RoundTimerTask extends TimerTask {
         public void run() {
             timeText.setText("Time Left:" + countDown);
@@ -253,16 +264,20 @@ public class Driver {
 
 
     public void startTurn() throws IOException {
-        System.out.println("turn number  = " + turnNumber);
-        currentPlayer = players.get(turnNumber);
-        if (isLandSelectionPhase()) {
-            stage = new Stage();
-            root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
-            stage.setScene(new Scene(root));
-            stage.setTitle("Purchase Property for " + currentPlayer.getName());
-            stage.initModality(Modality.APPLICATION_MODAL);
-            //stage.initOwner(source.getScene().getWindow());
-            stage.showAndWait();
+        try {
+            System.out.println("turn number  = " + turnNumber);
+            currentPlayer = players.get(turnNumber);
+            if (isLandSelectionPhase()) {
+                stage = new Stage();
+                root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
+                stage.setScene(new Scene(root));
+                stage.setTitle("Purchase Property for " + currentPlayer.getName());
+                stage.initModality(Modality.APPLICATION_MODAL);
+                //stage.initOwner(source.getScene().getWindow());
+                stage.showAndWait();
+            }
+        } catch (IOException e ){
+            System.out.println("> IOException in Driver's startTurn()");
         }
     }
 

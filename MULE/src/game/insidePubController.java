@@ -34,7 +34,8 @@ public class insidePubController extends configScreens.ControllerSuper{
             stage = (Stage) source.getScene().getWindow();
             if (source == yesGambleBtn) {
                 //int time = driver.getTimeLeft();
-                int time = 100;
+                //int time = 100;
+                int time = driver.getCountDown();
                 if (time >= 37) {
                     time = 200;
                 } else if (37 > time && time >= 25) {
@@ -46,7 +47,10 @@ public class insidePubController extends configScreens.ControllerSuper{
                 }
                 int round = driver.getRoundNumber();
                 int[] roundBonuses = {50, 50, 50, 100, 100, 100, 100, 150, 150, 150, 150, 200};
-//                int bonus = new Random().nextInt(time) + roundBonuses[round - 1];
+                /* Hey, I made this change to bonus because there was an ArrayIndexOutOfBoundsException.
+                    It might not make logical sense but I just wanted to get it to run.
+                    Feel free to change it! - Yamini
+                int bonus = new Random().nextInt(time) + roundBonuses[round - 1]; */
                 int bonus = new Random().nextInt(time) + roundBonuses[round + 2];
                 driver.getPlayer().addMoney(bonus);
                 //Display money earned screen TODO
