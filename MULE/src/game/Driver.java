@@ -25,12 +25,8 @@ public class Driver {
     private int turnNumber; // first player = 1, second player = 2, etc
     private Player currentPlayer;
     private ArrayList<Player> players;
-    private Timer timer;
     private Stage stage;
     private Parent root;
-    private int timeleft;
-    @FXML
-    private Text time;
 
 
     private ArrayList<String> plainURLS = new ArrayList<String>() {{
@@ -125,7 +121,7 @@ public class Driver {
 
     public void selectProperty(Location loc, Button source, ImageView imgv) throws IOException {
         if (isLandSelectionPhase()) {
-            int playerNumber = (roundNumber - 1) % players.size();
+            int playerNumber = (roundNumber + 1) % players.size();
             players.get(playerNumber).addProperty(loc); //add property to player's property
             players.get(playerNumber).addMoney(-loc.getBuyingPrice()); //subtract money from player
             changeTile(loc, imgv);
@@ -147,11 +143,12 @@ public class Driver {
     }
 
     public void changeTile(Location loc, ImageView imgv) throws IOException {
-        int curPlayer = (roundNumber) % players.size();
+        int curPlayer = (roundNumber + 1) % players.size();
         System.out.println(imgv.getId());
         System.out.println("x" + loc.x + "y" + loc.y);
         if (containsLocation(plainLocations, loc)) {
             System.out.println("changing plain");
+            System.out.println("changeTile(): curPlayer = " + curPlayer);
             System.out.println(plainURLS.get(curPlayer));
             imgv.setImage(new Image(plainURLS.get(curPlayer)));
         } else if (containsLocation(riverLocations, loc)) {
@@ -215,18 +212,20 @@ public class Driver {
 
     }
 
-private int countDown = 60;
+    //global variables for Timer functionality
+    private Timer timer = new Timer();
+    private int countDown = 60;
+    @FXML
+    private Text timeText = new Text();
+
 
     public class RoundTimerTask extends TimerTask {
         public void run() {
-//            if (timeleft != 0) {
-//                timeleft--;
-//            }
-            time.setText("Time Left:" + countDown);
+            timeText.setText("Time Left:" + countDown);
             countDown--;
             if (countDown <= 0) {
                 timer.cancel();
-                time.setText("YOUR TURN IS OVER!");
+                timeText.setText("YOUR TURN IS OVER!");
                 countDown = 60;
                 try {
                     endTurn();
@@ -240,7 +239,8 @@ private int countDown = 60;
 
 
     public void startTurn() throws IOException {
-        currentPlayer = players.get(turnNumber - 1);
+        System.out.println("turn number  = " + turnNumber);
+        currentPlayer = players.get(turnNumber);
         if (isLandSelectionPhase()) {
             stage = new Stage();
             root = FXMLLoader.load(getClass().getResource("/game/purchasePropertyScreen.fxml"));
