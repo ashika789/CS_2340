@@ -23,7 +23,7 @@ public class insidePubController extends configScreens.ControllerSuper{
     private Button doneGamblingBtn;
 
     @FXML
-    private Label resultsLabel;
+    private Label resultsLabel = new Label();
 
     @FXML
     private void buttonHandler(ActionEvent event) {
@@ -44,25 +44,23 @@ public class insidePubController extends configScreens.ControllerSuper{
                 } else {
                     time = 50;
                 }
-
                 int round = driver.getRoundNumber();
                 int[] roundBonuses = {50, 50, 50, 100, 100, 100, 100, 150, 150, 150, 150, 200};
-                int bonus = new Random().nextInt(time) + roundBonuses[round - 1];
+//                int bonus = new Random().nextInt(time) + roundBonuses[round - 1];
+                int bonus = new Random().nextInt(time) + roundBonuses[round + 2];
                 driver.getPlayer().addMoney(bonus);
                 //Display money earned screen TODO
                 root = FXMLLoader.load(getClass().getResource("insidePub.fxml"));
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
                 resultsLabel.setText(Integer.toString(bonus));
             } else if (source == noGambleBtn) {
                 root = FXMLLoader.load(getClass().getResource("insideTown.fxml"));
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
             } else if (source == doneGamblingBtn) {
                 driver.endTurn();
+                root = FXMLLoader.load(getClass().getResource("insideTown.fxml"));
             }
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         } catch (IOException e) {
             System.out.println("> IOException in insidePubController's buttonHandler()");
         }
