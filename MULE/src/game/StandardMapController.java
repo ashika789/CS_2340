@@ -262,8 +262,8 @@ public class StandardMapController extends ControllerSuper{
                 Platform.runLater(new Runnable() {
                     public void run() {
                         if (countDown != 0) {
-                            //time.setText("Time left:" + countDown);
                             System.out.println(countDown);
+                            time.setText("Time left:" + countDown);
                             countDown--;
                             try {
                                 Thread.sleep(1000);
@@ -272,8 +272,8 @@ public class StandardMapController extends ControllerSuper{
                             }
 
                         } else {
-                            //time.setText("Your turn is up.");
                             System.out.println("Your turn is up");
+                            time.setText("Your turn is up.");
                             return;
                         }
 
