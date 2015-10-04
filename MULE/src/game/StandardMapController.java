@@ -262,15 +262,25 @@ public class StandardMapController extends ControllerSuper{
                 Platform.runLater(new Runnable() {
                     public void run() {
                         if (countDown != 0) {
-                            time.setText("Time left:" + countDown);
+                            //time.setText("Time left:" + countDown);
+                            System.out.println(countDown);
                             countDown--;
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+
                         } else {
-                            time.setText("Your turn is up.");
+                            //time.setText("Your turn is up.");
+                            System.out.println("Your turn is up");
+                            return;
                         }
+
                     }
                 });
             }
-        }, 0, 1000);
+        }, 1000, 1000);
     }
 
 
