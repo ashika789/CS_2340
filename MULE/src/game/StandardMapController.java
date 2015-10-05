@@ -272,7 +272,7 @@ public class StandardMapController extends ControllerSuper{
                 bonusPoints = 50;
             }
             System.out.println(bonusPoints);
-            //HOW DO YOU GET CURRENT PLAYER
+            currentPlayer.addMoney(bonusPoints);
             return true;
         } else {
             return false;
@@ -302,8 +302,6 @@ public class StandardMapController extends ControllerSuper{
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
-
-
                         } else {
                             System.out.println("Your turn is up");
                             if(driver.getPlayers().size() >= currentPlayer.getPlayerNumber() + 1) {
