@@ -316,6 +316,7 @@ public class StandardMapController extends ControllerSuper{
                             } else {
                                 System.out.println("End of round " + currentPlayer.getRoundNumber());
                                 currentPlayer.setRoundNumber(currentPlayer.getRoundNumber() + 1);
+                                System.out.println("Start of round " + currentPlayer.getRoundNumber());
                                 driver.calculatePlayerOrder();
                                 currentPlayer = driver.getPlayers().get(0);
                             }
