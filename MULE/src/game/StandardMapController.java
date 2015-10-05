@@ -137,6 +137,15 @@ public class StandardMapController extends ControllerSuper{
     @FXML
     private ImageView imageView48;
 
+    @FXML
+    private Button endRound;
+
+    private int bonusPoints;
+
+    Driver driver = new Driver();
+    Player currentPlayer = driver.getPlayers().get(0);
+
+
 
     @FXML
     private void buttonHandler(ActionEvent event) throws IOException {
@@ -246,12 +255,34 @@ public class StandardMapController extends ControllerSuper{
     }
 
 
+
     @FXML
-    private int countDown = 60;
+    public boolean endRoundEarly(ActionEvent a) {
+        Button source2 = (Button) a.getSource();
+        if(source2.equals(endRound)) {
+            bonusPoints = countDown;
+            countDown = 0;
+            if(bonusPoints >= 37 || bonusPoints < 50) {
+                bonusPoints = 200;
+            } else if(bonusPoints >= 25 || bonusPoints < 37) {
+                bonusPoints = 150;
+            } else if(bonusPoints >= 12 || bonusPoints < 25) {
+                bonusPoints = 100;
+            } else {
+                bonusPoints = 50;
+            }
+            System.out.println(bonusPoints);
+            //HOW DO YOU GET CURRENT PLAYER
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @FXML
+    private int countDown;
     @FXML
     private Text time = new Text();
-
-
 
     @FXML
     public void startCountDown() {
@@ -261,9 +292,10 @@ public class StandardMapController extends ControllerSuper{
             public void run() {
                 Platform.runLater(new Runnable() {
                     public void run() {
+                        countDown = currentPlayer.calculatePlayerTime(currentPlayer);
                         if (countDown != 0) {
                             System.out.println(countDown);
-                            time.setText("Time left:" + countDown);
+                            //time.setText("Time left:" + countDown);
                             countDown--;
                             try {
                                 Thread.sleep(1000);
@@ -271,10 +303,22 @@ public class StandardMapController extends ControllerSuper{
                                 e.printStackTrace();
                             }
 
+
                         } else {
                             System.out.println("Your turn is up");
-                            time.setText("Your turn is up.");
-                            return;
+                            if(driver.getPlayers().size() >= currentPlayer.getPlayerNumber() + 1) {
+                                currentPlayer.setRoundNumber(currentPlayer.getRoundNumber() + 1);
+                                currentPlayer = driver.getPlayers().get(currentPlayer.getPlayerNumber());
+                                System.out.println("Player " + currentPlayer + "'s  turn!");
+                                countDown = driver.getPlayers().get(currentPlayer.getPlayerNumber()).calculatePlayerTime(driver.getPlayers().get(currentPlayer.getPlayerNumber()));
+                                //time.setText("Your turn is up.");
+                                return;
+                            } else {
+                                System.out.println("End of round " + currentPlayer.getRoundNumber());
+                                currentPlayer.setRoundNumber(currentPlayer.getRoundNumber() + 1);
+                                driver.calculatePlayerOrder();
+                                currentPlayer = driver.getPlayers().get(0);
+                            }
                         }
 
                     }

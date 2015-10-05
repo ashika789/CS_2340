@@ -2,7 +2,7 @@ package game;
 /**
  * Created by yamininambiar on 10/2/15.
  */
-
+// IGNORE EVERYTHING ON THIS CLASS
 
         import javafx.application.Platform;
         import javafx.fxml.FXML;

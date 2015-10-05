@@ -13,7 +13,6 @@ public class Player {
     private String name;
     private String type; //"Human", "AI", "Not playing"
     private String race; //"Human", "Flapper", "Bonzoid", "Ugaite", "Buzzite"
-
     private double food;
     private double energy;
     private double crystite;
@@ -21,6 +20,9 @@ public class Player {
     private int mule;
     private int playerNumber;
     private int money;
+
+    private int roundNumber = 1;
+    private int playerTime;
 
 
 
@@ -90,6 +92,22 @@ public class Player {
     }
 
 
+
+    public int getPlayerTime() {
+        return playerTime;
+    }
+
+    public void setPlayerTime(int t) {
+        playerTime = t;
+    }
+
+    public int getRoundNumber() {
+        return roundNumber;
+    }
+
+    public void setRoundNumber(int r) {
+        roundNumber = r;
+    }
 
     public String getName() {
         return name;
@@ -164,5 +182,48 @@ public class Player {
     /*1 point per dollar of money
     500 points for each plot of land owned
     1 point per dollar value of goods (energy, food, ore)*/
+
+    public int calculatePlayerTime(Player p) {
+        if(roundNumber == 1 && p.getFood() < 3 && p.getFood() > 0) {
+            p.setPlayerTime(50);
+            return 50;
+        } else if(roundNumber == 2 && p.getFood() < 3 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 3 && p.getFood() < 3 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 4 && p.getFood() < 3 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 5 && p.getFood() < 4 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 6 && p.getFood() < 4 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 7 && p.getFood() < 4 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 8 && p.getFood() < 4 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 9 && p.getFood() < 5 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 10 && p.getFood() < 5 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 11 && p.getFood() < 5 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else if(roundNumber == 12 && p.getFood() < 5 && p.getFood() > 0 && p.getEnergy() < p.getMule()) {
+            p.setPlayerTime(30);
+            return 30;
+        } else {
+            p.setPlayerTime(5);
+            return 5;
+        }
+    }
 
 }

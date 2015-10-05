@@ -13,6 +13,8 @@ import java.util.TimerTask;
 public class Timer {
 
 
+    // IGNORE EVERYTHING ON THIS CLASS
+
     @FXML
     private int countDown = 50;
     @FXML
